@@ -6,7 +6,6 @@ import Signup from './pages/auth/Signup';
 import AppCategory from './pages/Category/AppCategory';
 import CreatePost from './pages/createPost/CreatePost';
 import OrderTokens from './pages/order/OrderTokens';
-import Category from './category/Category';
 import { useSelector, useDispatch } from "react-redux"
 import SinglePost from './pages/singlePost/SinglePost';
 import { useEffect, useState } from 'react';
@@ -19,7 +18,6 @@ import NewSession from './components/modal/sessionCompleted/SessionCompleted';
 import ProfilePost from './pages/singlePost/profilePost/ProfilePost';
 import Transaction from './pages/profile/Trasaction/Transaction';
 import Initial from './pages/profile/Initial/Initial';
-import AllPost from './pages/profile/AllPost/AllPost';
 import Contents from './pages/profile/Contents/Contents';
 
 function App() {
@@ -96,7 +94,7 @@ function App() {
           <Route path='transactions' element={<Transaction />} />
           <Route path='content' element={<Contents />} />
         </Route>
-        <Route path="/category" element={<Category />} />
+        {/* <Route path="/category" element={<Category />} /> */}
         <Route path='/category/:catName' element={<AppCategory />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/createpost" element={<ProtectedRoute> <CreatePost /> </ProtectedRoute>} />
