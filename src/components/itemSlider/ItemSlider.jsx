@@ -91,7 +91,7 @@ const ItemSlider = ({ items, type, isLoading, sliderWidth }) => {
 
     return (
         <>
-            <div className={styles.sliderWrapper} style={{ width: `${sliderWidth - 50}px`, height: "", position: "relative" }}>
+            <div className={styles.sliderWrapper} style={{ width: `${sliderWidth - 20}px`, height: "", position: "relative", margin: "auto" }}>
                 <Slider {...settings}>
 
                     {

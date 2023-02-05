@@ -12,13 +12,14 @@
   cursor: pointer;
   top: 7rem;
   z-index: 33;
+  left: -2rem;
 }
 .sliderArrow img {
   width: 30px;
 }
 
 .rightArrow {
-  right: 1.5rem;
+  right: 2.5rem;
   text-align: end;
 }
 .leftArrow {

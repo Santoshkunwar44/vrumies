@@ -1,6 +1,7 @@
 .profilePost {
   width: 100%;
   background-color: #000000;
+  padding: 15px;
   padding-bottom: 2rem;
 }
 .profilePostTop {
@@ -10,7 +11,7 @@
   min-height: 250px;
   background-color: #001219;
   border-radius: 12px;
-  padding: 15px;
+  padding: 2rem 15px;
 }
 
 .postHeader {
@@ -25,6 +26,7 @@
   padding: 5px 10px;
 }
 .postTitle {
+  text-align: start;
   text-transform: capitalize;
   color: #37e710;
   letter-spacing: 1px;
@@ -45,6 +47,7 @@
 .postProfileImg {
   border-radius: 50%;
   width: 45px;
+  object-fit: cover;
   height: 45px;
 }
 .postLeftInnerBox {
@@ -58,7 +61,7 @@
   padding-right: 15px;
   justify-content: space-between;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 .createdAt {
   font-size: 10px;
@@ -68,6 +71,7 @@
 }
 .rightDetailsBox {
   display: flex;
+  gap: 10px;
   padding: 10px;
   flex-direction: column;
   align-items: flex-start;
@@ -110,7 +114,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 2rem;
 }
 .share_comment_btn_box {
   width: 100%;
@@ -192,4 +196,146 @@
   width: 100%;
   min-height: 250px;
   margin: 2rem 0;
+}
+.mini_categoryInfo {
+  display: none;
+}
+
+.postProfileImgWrapper {
+}
+.postProfileImgWrapper img {
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .rightDetailsItem {
+    font-size: 11px;
+  }
+  .postCategoryInfo {
+    font-size: 9px;
+  }
+  .postUsername {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .postLeftInnerBox {
+    gap: 20px;
+  }
+  .postProfileImg {
+  }
+  .createdAt {
+    letter-spacing: 1px;
+    font-size: 9px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .profilePost {
+    padding: 1rem 15px;
+  }
+  .rightDetailsItem {
+    font-size: 10px;
+  }
+  .postCategoryInfo {
+    font-size: 9px;
+  }
+  .postUsername {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .postLeftInnerBox {
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  .postProfileImg {
+    width: 40px;
+    height: 40px;
+  }
+  .createdAt {
+    letter-spacing: 1px;
+    font-size: 9px;
+  }
+  .postCategoryInfo {
+    display: none;
+  }
+  .mini_categoryInfo {
+    display: flex;
+  }
+  .postHeaderLeft {
+    gap: 0.5rem;
+  }
+  .postTitle {
+    line-height: 25px;
+    font-size: 20px;
+  }
+  .rightDetailsBox {
+    gap: 6px;
+  }
+  .replyHeader {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .profilePost {
+    padding: 1rem 0;
+  }
+  .rightDetailsItem {
+    font-size: 10px;
+  }
+  .postCategoryInfo {
+    font-size: 9px;
+  }
+  .postUsername {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .postLeftInnerBox {
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  .postProfileImg {
+    width: 40px;
+    height: 40px;
+  }
+  .createdAt {
+    letter-spacing: 1px;
+    font-size: 9px;
+  }
+  .postCategoryInfo {
+    display: none;
+  }
+  .mini_categoryInfo {
+    display: flex;
+  }
+  .postHeaderLeft {
+    gap: 0.5rem;
+  }
+  .postTitle {
+    line-height: 25px;
+    font-size: 20px;
+  }
+  .rightDetailsBox {
+    gap: 6px;
+  }
+  .replyHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  /* info  text */
+  .moreVBTInfoText {
+    font-size: 10px;
+  }
+  .vbtDetailsBox p {
+    font-size: 12px;
+  }
+  .VBTupdateBtn {
+    height: 30px;
+    padding: 0 10px;
+  }
+  .moreVBTbox {
+    margin-left: auto;
+  }
+  .replyQuotesContainer {
+    margin: 1rem;
+  }
+  .postHeader {
+    flex-direction: column;
+  }
 }

@@ -1,10 +1,10 @@
 /* main box */
 .imageBox {
-  width: 100% !important;
-  height: 180px !important;
+  height: 200px !important;
   text-align: center;
   display: flex;
   /* align-items: center; */
+  margin: 0 auto;
   justify-content: center;
 }
 
@@ -17,7 +17,7 @@
 }
 .postImgItem img {
   width: 100%;
-  height: 120px;
+  height: 170px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -65,7 +65,18 @@
 
   text-align: start;
 }
+._postImg_slider_items {
+  width: 100% !important;
+}
+
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .postImgItem img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
   .slick-slider {
     /* width: 600px !important; */
   }
@@ -78,5 +89,11 @@
 
   .catArrows {
     top: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .imageBox {
+    height: 250px !important;
   }
 }

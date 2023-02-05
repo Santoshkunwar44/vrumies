@@ -148,7 +148,7 @@
   overflow: visible;
 }
 .sliderQuotes {
-  width: 90% !important;
+  width: 95% !important;
 }
 @media screen and (max-width: 600px) {
   .replyQuotes {

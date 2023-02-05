@@ -58,12 +58,21 @@ const ProfilePost = () => {
                         <div className={styles.postHeaderLeft}>
 
                             <h2 className={styles.postTitle}>{postData?.title}</h2>
+                            <div className={`${styles.postCategoryInfo} ${styles.mini_categoryInfo}`}>
+
+                                <p>Category : <span>{postData?.category}</span> </p>
+                                <p> - Subsection : <span>{postData?.subCategory}</span> </p>
+                                <p> - Type : <span>{postData?.type}</span> </p>
+                            </div>
                             <div className={styles.postLeftInnerBox}>
-                                <img className={styles.postProfileImg} src={postData?.owner?.profileImg} alt="userImg" />
+                                <div className={styles.postProfileImgWrapper}>
+
+                                    <img className={styles.postProfileImg} src={postData?.owner?.profileImg} alt="userImg" />
+                                </div>
                                 <div className={styles.postTimAgoDiv}>
                                     <div className={styles.postUsernameAndCatBox}>
 
-                                        <p>{postData?.owner?.username}</p>
+                                        <p className={styles.postUsername}>{postData?.owner?.username}</p>
                                         <div className={styles.postCategoryInfo}>
 
                                             <p>Category : <span>{postData?.category}</span> </p>
@@ -76,22 +85,23 @@ const ProfilePost = () => {
                                     </p>
                                 </div>
                             </div>
+
                         </div>
                         <div className={styles.postHeaderRight}>
                             <div className={styles.rightDetailsBox}>
                                 <p className={styles.rightDetailsItem}>Average rating : <span>{postData?.owner?.avgRating}/10</span></p>
                                 <p className={styles.rightDetailsItem}>View Location : <span>{postData?.onlineOnly ? "Disabled" : "Enabled"} </span></p>
-                                <p className={styles.rightDetailsItem}>{postData?.location?.city} , {postData?.location?.state}</p>
-                                <div className={styles.postOrderBox}>
-                                    <div className={styles.postVBtBox}>
+                                {
+                                    !postData?.onlineOnly && <p className={styles.rightDetailsItem}>{postData?.location?.city} , {postData?.location?.state}</p>
+                                }
+                                {/* <div className={styles.postVBtBox}>
 
                                         <p>{postData?.VBTused}</p>
                                         <img src="/token.png" alt="tokenImg" />
 
 
-                                    </div>
-                                    <button className={styles.orderBtn}>Order Now  $320</button>
-                                </div>
+                                    </div> */}
+                                {/* <button className={styles.orderBtn}>Order Now  $320</button> */}
                             </div>
 
 
@@ -132,9 +142,9 @@ const ProfilePost = () => {
                                 <p className={styles.moreVBTInfoText}>Add More VBT's <span className={styles.balanceText}>(Balance:50 VBT)</span></p>
                             </div>
                             <div className={styles.vbtDetailsBox}>
-                                <div className={styles.vbtQuantityBox}>
+                                <p className={styles.vbtQuantityBox}>
                                     4
-                                </div>
+                                </p>
                                 <p>VBT</p>
                                 <div className={styles.vbtActionBtn}>
 
@@ -153,10 +163,11 @@ const ProfilePost = () => {
 
                     <div className={styles.replyQuotesSliderBox}>
                         {
-                            replyQuotes === null ? "" : replyQuotes?.length === 0 ? <NotFound text={"No Reply Quotes "} /> : <ItemSlider items={replyQuotes} type={"reply"} sliderWidth={width} />
+                            replyQuotes === null ? "" : replyQuotes?.length === 0 ? <NotFound text={"No Reply Quotes "} /> : <ItemSlider items={replyQuotes} type={"reply"} sliderWidth={width - 50} />
                         }
 
                     </div>
+
 
                 </div>
 

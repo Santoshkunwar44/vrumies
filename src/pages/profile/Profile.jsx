@@ -234,7 +234,7 @@ const Profile = () => {
                         </div>
                     </div>
                     <div ref={postReplyQuotes} className={styles.profileRightBottom}>
-                        <Outlet context={{ width: (postReplyBoxWidth - 50) }} />
+                        <Outlet context={{ width: (postReplyBoxWidth) }} />
                     </div>
                 </div>
             </div>
