@@ -38,11 +38,11 @@ export const PostImgSlider = ({ items, postImgwidth }) => {
 
 
 
-    if (items.length < 3) {
+    if (items?.length < 3) {
         return <div className="normal_imgBox">
 
             {
-                items.map((photo) => {
+                items?.map((photo) => {
                     return <div className="normal_image_item">
 
                         <img src={photo} alt="postImg" />
@@ -61,7 +61,7 @@ export const PostImgSlider = ({ items, postImgwidth }) => {
                 <Slider {...sliderSettings}>
 
                     {
-                        items.map((photo) => {
+                        items?.map((photo) => {
                             return <div key={photo} className="postImgItem">
                                 <img src={photo} alt="postImg" />
                             </div>

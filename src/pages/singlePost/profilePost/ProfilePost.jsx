@@ -8,28 +8,39 @@ import NotFound from "../../../components/notFound/NotFound"
 import { PostImgSlider } from "../../../components/itemSlider/postImgSlider/PostImgSlider"
 import SharePost from "../../../components/popOvers/sharePostPopOver/SharePost"
 import MetaDecorator from "../../../components/MetaDecorator/MetaDecorator"
+import { getPostById } from "../../../utils/apis/post/postApi"
 const ProfilePost = () => {
 
 
     const { postId } = useParams()
     const { width } = useOutletContext();
     const [replyQuotes, setReplyQuotes] = useState(null)
-    const { state: { postData } } = useLocation()
+    const [postData, setPostData] = useState({})
+
 
 
     useEffect(() => {
 
-        if (postData?._id) {
+        if (postId) {
+            fetchCurrentPost()
             fetchReplyQuoteList()
         }
+    }, [postId])
 
-    }, [postData])
+    const fetchCurrentPost = async () => {
+        try {
+            const { data } = await getPostById(postId)
+            setPostData(data.message)
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     const fetchReplyQuoteList = async () => {
 
 
         try {
-            const { data } = await getReplyByPost(postData?._id)
+            const { data } = await getReplyByPost(postId)
             setReplyQuotes(data.message)
         } catch (error) {
             console.log(error)
@@ -40,7 +51,7 @@ const ProfilePost = () => {
     }
     return (
         <>
-            <MetaDecorator image={postData?.postImg[0]} title={postData?.title} description={postData?.desc} />
+            <MetaDecorator image={postData?.title && postData?.postImg[0]} title={postData?.title} description={postData?.desc} />
             <div className={styles.profilePost}>
                 <div className={styles.profilePostTop}>
                     <div className={styles.postHeader}>
