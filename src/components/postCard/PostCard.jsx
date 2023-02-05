@@ -112,12 +112,12 @@ const PostCard = ({ postData, setTheReplies }) => {
                         <div className={styles.infoLeft}>
 
                             <div className={styles.infoLeftItem}>
-                                <span className={styles.postSubTitle}><span>Sub-section</span>    <span> &nbsp;:</span> </span>
+                                <span className={styles.postSubTitle}><span>Category</span>    <span> &nbsp;:</span> </span>
                                 <span>{postData?.category}</span>
 
                             </div>
                             <div className={styles.infoLeftItem}>
-                                <span className={styles.postSubTitle}> <span>Sub-section</span>  <span> &nbsp;:</span></span>
+                                <span className={styles.postSubTitle}> <span>Subsection</span>  <span> &nbsp;:</span></span>
                                 <span>{postData?.subCategory}</span>
 
                             </div>
