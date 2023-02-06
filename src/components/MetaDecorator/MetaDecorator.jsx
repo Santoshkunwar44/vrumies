@@ -4,19 +4,19 @@ const MetaDecorator = ({ image, title, description }) => {
     return (
         <>
             <Helmet>
-                <meta name='title' property="og:title" content={`${title} hi`} />
-                <meta name='description' property="og:description"
-                    content={`${description} Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi vitae fugiat aperiam ut obcaecati voluptates autem magni, delectus explicabo, libero voluptatum illo perspiciatis nesciunt sit eaque assumenda! Accusantium assumenda ea quisquam incidunt provident voluptas ipsa error id distinctio, itaque aut magni nostrum! Aliquam vero dolor at similique sed! `} />
-                <meta name="image" property="og:image"
-                    content="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmlrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60" />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
+                <meta name="title" content="buy this flowers" />
+                <meta name="description" content="buy this flowrs " />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://vrumies2.netlify.app" />
+                <meta name='title' property="og:title" content="buy this flowers" />
+                <meta name='description' property="og:description" content="buy this flowrs " />
+                <meta property="og:image" content="https://scontent.fbwa1-1.fna.fbcdn.net/v/t1.15752-9/324926288_3440684446168532_8492699774424784759_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=I3ofvt1uLLQAX9x2kfd&_nc_ht=scontent.fbwa1-1.fna&oh=03_AdROj7KAHW2PIt6X0gPsHGvUoPaZJP34siUmAqSQE6NutA&oe=64084FAD" />
+
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:title" content="The vrumies " />
-                <meta name="description" property="twitter:description"
-                    content="Find something you need right now . Buy and sell your items at Vrumies     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi vitae fugiat aperiam ut obcaecati voluptates autem magni, delectus explicabo, libero voluptatum illo perspiciatis nesciunt sit eaque assumenda! Accusantium assumenda ea quisquam incidunt provident voluptas ipsa error id distinctio, itaque aut magni nostrum! Aliquam vero dolor at similique sed! Libero voluptatum ullam iusto voluptates iure vero tempora illo in nulla minus, earum amet debitis deleniti eligendi veritatis voluptas quae quos assumenda, saepe excepturi quaerat optio dolores. Aut, vero accusantium labore quidem eum voluptatem quae. Maxime ea sapiente asperiores ratione, culpa dolore nulla est velit odio ipsam, natus optio ullam veniam!" />
-                <meta name="image" property="twitter:image"
-                    content="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmlrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60" />
+                <meta property="twitter:url" content="https://vrumies2.netlify.app" />
+                <meta property="twitter:title" content="buy this flowers" />
+                <meta property="twitter:description" content="buy this flowrs " />
+                <meta property="twitter:image" content="https://scontent.fbwa1-1.fna.fbcdn.net/v/t1.15752-9/324926288_3440684446168532_8492699774424784759_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=I3ofvt1uLLQAX9x2kfd&_nc_ht=scontent.fbwa1-1.fna&oh=03_AdROj7KAHW2PIt6X0gPsHGvUoPaZJP34siUmAqSQE6NutA&oe=64084FAD" />
 
             </Helmet>
         </>
