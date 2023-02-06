@@ -9,7 +9,7 @@ const MetaDecorator = ({ image, title, description }) => {
                 <meta property="og:title" content="buy this flowers" />
                 <meta property="og:description" content="buy this flowrs " />
                 {/* <meta property="og:image" content="https://scontent.fbwa1-1.fna.fbcdn.net/v/t1.15752-9/324926288_3440684446168532_8492699774424784759_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_ohc=I3ofvt1uLLQAX9x2kfd&_nc_ht=scontent.fbwa1-1.fna&oh=03_AdROj7KAHW2PIt6X0gPsHGvUoPaZJP34siUmAqSQE6NutA&oe=64084FAD" /> */}
-                <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"></meta>
+                <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png" />
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://vrumies2.netlify.app/" />
                 <meta property="twitter:title" content="buy this flowers" />
