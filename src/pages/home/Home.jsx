@@ -3,6 +3,7 @@ import { useRef } from "react"
 import { useState } from "react"
 import BannerContainer from "../../components/HomeBanner/BannerContainer"
 import HomeCategory from "../../components/HomeCategory/HomeCategory"
+import MetaDecorator from "../../components/MetaDecorator/MetaDecorator"
 import Navbar from "../../components/Navbar/Navbar"
 import styles from "./home.module.css"
 
@@ -27,6 +28,7 @@ const Home = () => {
 
     return (
         <>
+            <MetaDecorator description={"Selling this bike"} title={"Anybody interested on buying this bike "} />
             <Navbar />
             <div
                 className={styles.home}>
