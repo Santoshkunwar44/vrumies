@@ -72,9 +72,11 @@ app.use(session({
     saveUninitialized: true,
     store,
     cookie: {
-        secure: false,
+        secure: true,
         maxAge: 31556952000,
-        httpOnly: true,    },
+        httpOnly: true,
+        sameSite:"none"    
+    },
 }))
 
 app.use(passport.initialize())
