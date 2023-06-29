@@ -1,0 +1,1396 @@
+.createPost {
+  width: 100%;
+  height: calc(100vh - 100px);
+  margin-top: 100px;
+}
+.createPostWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
+  gap: 2rem;
+}
+.mini_photo_wrapper {
+  display: none;
+  display: flex;
+}
+.createPostTopBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 175px;
+  border: 3px solid #37e710;
+  border-radius: 11px;
+}
+.createPostMainContent {
+  flex: 8.5;
+  width: 100%;
+}
+.createPostTopLeftWrapper {
+  display: flex;
+  padding: 0 10px;
+  gap: 1rem;
+  flex: 1;
+  align-items: center;
+}
+.createPostTopRight {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+.topRightWrapper {
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hrLine {
+  height: 80%;
+  width: 0.4px;
+  background-color: gray;
+}
+.postTopOptionsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.checkBoxWrapper {
+  background: #000000;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+  border: 2px solid #c9c9c9;
+  box-shadow: 0px 4px 9px rgba(55, 231, 16, 0.1);
+  width: 280px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  justify-content: center;
+  border-radius: 5px;
+  gap: 1rem;
+}
+.enabledOption {
+  border: 2px solid #37e710;
+}
+.checkBoxWrapper span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  /* or 91% */
+
+  text-align: center;
+  color: #979797;
+  letter-spacing: 1.76px;
+}
+.enabledOption span {
+  color: #37e710;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 20px;
+  /* or 91% */
+  text-align: center;
+  letter-spacing: 1.76px;
+}
+
+.checkBoxWrapper input {
+  width: 30px;
+  background-color: transparent;
+  height: 30px;
+}
+.greenText {
+  color: #37e710;
+}
+.optionsRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.postLeftContents {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.postLocationText {
+  color: #37e710;
+  font-size: 14px;
+}
+.postLeftContents p {
+  text-align: start;
+  color: #37e710;
+  margin-bottom: 1rem;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 20px;
+  /* identical to box height, or 95% */
+
+  letter-spacing: -0.24px;
+
+  color: #37e710;
+}
+.postLocationCityCountryBox {
+  flex: 1;
+  min-height: 60px;
+}
+.locationCityBox {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.locationCityBox select {
+  width: 146px;
+  height: 45px;
+
+  background: #000000;
+
+  border: 2px solid #ffffff61;
+  border-radius: 4px;
+  color: #808080;
+  outline: none;
+  font-size: 17px;
+  padding: 0 10px;
+}
+.select_boxes {
+  display: flex;
+  gap: 10px;
+}
+.locationCityBox select option {
+  color: #808080;
+}
+.postLocationBtnsBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.postTopRightHeader {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 20px;
+  /* identical to box height, or 95% */
+
+  text-align: start;
+  letter-spacing: -0.24px;
+
+  color: #37e710;
+}
+.postToprightInfosBox {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.postToprightInfosBox p {
+  text-align: start;
+}
+.key {
+  color: #979797;
+}
+/* createPostContentWrapper */
+
+.createPostContentWrapper {
+  width: 100%;
+  display: flex;
+
+  gap: 3rem;
+}
+.createPostContentWrapper_left {
+  gap: 2rem;
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.createPostBottomVBTInfoTextBox {
+  text-align: start;
+}
+.minimumVBTwarnText {
+  margin-top: 8px;
+  font-size: 13px;
+}
+.createPostContentWrapper_left_header {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 22px;
+  /* or 44% */
+  text-align: start;
+  width: 100%;
+
+  color: #37e710;
+}
+
+.createPost_left_input {
+  border: none;
+  outline: none;
+  width: 810px;
+  height: 57px;
+  left: 131px;
+  top: 387px;
+  color: #808080;
+  font-size: 17px;
+  padding: 0 1rem;
+  background: #001219;
+  border: 1px solid #ffffff61;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.createPost_description {
+  width: 100%;
+  height: 200px;
+  outline: none;
+  color: #808080;
+  font-size: 17px;
+  padding: 1rem;
+  background: #001219;
+  border: 1px solid #ffffff61;
+  border-radius: 8px;
+}
+.createPost_inputWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+/* cratePostContentRight */
+
+.cratePostContentRight {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 7;
+}
+.createPostTypeSelect {
+  height: 50px;
+  width: 100%;
+  background: #001219;
+  border: 1px solid #c1c1c198;
+  border-radius: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.createPostTypeOption {
+  width: 50%;
+  height: 48px;
+  background-color: transparent;
+  border-radius: 46px;
+  border: none;
+  outline: none;
+}
+.createPostTypeOption span {
+  font-style: normal;
+  font-family: "poppins";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height, or 106% */
+  text-align: center;
+  letter-spacing: -0.084px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.createPostRightInputsBox {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 7;
+}
+.inventoryLeftBox {
+  flex: 1;
+}
+.inventoryLeft .catBannerBtnWrapper {
+  width: 100%;
+}
+.createPostSelect {
+  width: 250px;
+  height: 50px;
+  outline: none;
+
+  background: #001219;
+  border: 3px solid #37e710;
+  box-shadow: 0px 4px 9px rgba(55, 231, 16, 0.1);
+  border-radius: 5px;
+  color: white;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 22px;
+  line-height: 20px;
+  /* identical to box height, or 91% */
+padding: 0 5px;
+ 
+  letter-spacing: -0.24px;
+
+  color: #ffffff;
+}
+.typeSelect {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.priceSettingItem {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 4;
+}
+.websiteUrlItem {
+  flex: 8;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.websiteUrlBox {
+  width: 100%;
+  height: 50px;
+  background: #001219;
+  border: 3px solid #37e710;
+  box-shadow: 0px 4px 9px rgba(55, 231, 16, 0.1);
+  border-radius: 5px;
+}
+.createPostRightInputsItem {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  align-items: flex-start;
+  gap: 0.51rem;
+}
+
+.label {
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 91% */
+
+  text-align: center;
+  letter-spacing: -0.24px;
+
+  color: #808080;
+}
+.activeCreatePostTypeOption {
+  background-color: #37e710;
+}
+.activeCreatePostTypeOption span {
+  opacity: 1;
+  color: #001219;
+}
+.priceSettingBox {
+  width: 100%;
+  height: 50px;
+  background: #001219;
+  border: 3px solid #37e710;
+  box-shadow: 0px 4px 9px rgba(55, 231, 16, 0.1);
+  border-radius: 5px;
+}
+.priceSettingBox input,
+.websiteUrlBox input {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #808080;
+  padding: 0 10px;
+  font-size: 17px;
+}
+.contentRightOptionsBottom {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.contentRightOptionsBottom img {
+  display: flex;
+  width: 35px;
+}
+.tokenRequiredTextBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 10px;
+}
+.tokenRequiredTextBox p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height, or 111% */
+
+  text-align: center;
+  letter-spacing: -0.24px;
+
+  color: #37e710;
+}
+.totalBalance {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px !important;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+  text-align: start;
+  letter-spacing: -0.24px;
+
+  color: #ffffff !important;
+}
+.priceSettingBox input {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  background: transparent;
+}
+.priceSettingBox input::placeholder {
+  font-size: 18px;
+}
+.contentRightTop {
+  display: flex;
+  gap: 2rem;
+}
+.createPostImageWrapper {
+  width: 200px;
+  justify-content: centerg;
+  border-radius: 15px;
+  border: 5px dashed;
+  width: 100%;
+  display: grid;
+  height: 200px;
+  place-items: center;
+}
+.createPostImageWrapper {
+  flex: 5;
+  height: 100%;
+}
+/* createPostBottomContent */
+
+.createPostBottomContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+.vbtTextBottom {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  /* identical to box height, or 91% */
+
+  letter-spacing: -0.24px;
+
+  color: #37e710;
+}
+.vbtcount {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 20px;
+  /* identical to box height, or 74% */
+
+  text-align: center;
+  letter-spacing: -0.24px;
+
+  color: #ffffff;
+}
+.vbtBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.vbtBox img {
+  width: 25px;
+  cursor: pointer;
+}
+.bottom_BtnWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.postBtn {
+  height: 50px;
+  width: 150px;
+  left: 1467px;
+  top: 969px;
+
+  background: #37e710;
+  border-radius: 7px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  /* or 110% */
+
+  letter-spacing: 5.76px;
+
+  color: #000000;
+}
+.backBtn {
+  width: 150px;
+  height: 50px;
+  justify-content: center;
+  gap: 1rem;
+  background-color: transparent;
+  border: 1px solid #37e710;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+.backBtn span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  /* or 110% */
+
+  letter-spacing: 5.76px;
+
+  color: #37e710;
+}
+.backBtn img {
+  width: 25px;
+}
+.catBannerBtnWrapperBox {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+}
+.catBtnOption {
+  width: 132px;
+  height: 48px;
+  background-color: transparent;
+  border-radius: 46px;
+  border: none;
+  outline: none;
+}
+.catBtnOption span {
+  font-style: normal;
+  font-family: "poppins";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height, or 106% */
+  text-align: center;
+  letter-spacing: -0.084px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.catBannerBtnWrapper {
+  width: 220px;
+  height: 50px;
+  padding: 0px;
+
+  background: #001219;
+  border: 1px solid #c1c1c198;
+  border-radius: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.catBannerBtnWrapperBox {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+}
+.activeCatOption {
+  background-color: #37e710;
+}
+.activeCatOption span {
+  opacity: 1;
+  color: #001219;
+}
+/* inventoryOptionBox */
+.inventoryDisabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+.inventoryOptionBox {
+  padding: 0 1rem;
+  width: 100%;
+  height: 127px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid #ffffff61;
+  border-radius: 8px;
+}
+.inventoryRightBox {
+  width: 100%;
+}
+.inventoryChooseBox {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.inventoryRight,
+.inventoryLeft,
+.inventoryMid {
+  border: 1px solid#ffffff61;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: #37e710;
+  font-weight: bold;
+  cursor: pointer;
+}
+.inventoryLeft {
+  flex: 3;
+}
+.inventoryMid {
+  flex: 6;
+  color: white;
+}
+.inventoryRight {
+  flex: 3;
+}
+.createPostRightInputsItem {
+  width: 100%;
+}
+.createPostRightInputsItem select {
+  width: 100% !important;
+}
+/* bottom content  */
+.bottomfirstContent {
+  display: flex;
+  gap: 2rem;
+}
+.mini_photo_wrapper {
+  display: none;
+}
+/* url and price setting */
+.websiteAndpriceBox {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.createPostImageWrapper span {
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+.createPostImageWrapper span:nth-of-type(2) {
+  color: #37e710;
+}
+.imageWrapperInfo {
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  margin: auto;
+}
+.vbtBox p {
+  text-align: center;
+  width: 30px;
+}
+.inventoryLeftBox p {
+  margin-bottom: 10px;
+}
+
+/* create option */
+.createOptionBox {
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+.option_box_left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  flex: 7.5;
+}
+.option_box_right {
+  flex: 4.5;
+  height: 100%;
+  padding: 1rem;
+}
+.additional_information_box {
+  background-color: #001219;
+
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+.additional_information_box h2 {
+  color: #37e710;
+  margin: 10px 0;
+  padding: 5px;
+}
+.add_info_list {
+  display: flex;
+  width: 95%;
+
+  flex-direction: column;
+  gap: 10px;
+}
+.create_new_info {
+  margin: 1rem;
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: 1px solid #37e710;
+  cursor: pointer;
+}
+.create_post_tab {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.create_post_left_tab {
+  width: 100%;
+  cursor: pointer;
+  text-align: start;
+}
+.create_post_left_tab h2,
+.create_post_right_option_tab h2 {
+  /* border: 3px solid rgba(128, 128, 128, 0.568); */
+  width: fit-content;
+  color: gray;
+  padding: 4px 10px;
+  border-radius: 4px;
+
+  letter-spacing: 2px;
+}
+.active_create_post_tab {
+  color: white !important;
+  /* border: 3px solid #37e710 !important; */
+}
+.create_post_right_option_tab {
+  width: 100%;
+  text-align: start;
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .createPostSelect {
+    font-size: 16px;
+    width: 250px;
+  }
+  .checkBoxWrapper {
+    width: 230px;
+    height: 55px;
+  }
+  .checkBoxWrapper span {
+    font-size: 17px;
+  }
+  .checkBoxWrapper input {
+    width: 20px;
+    height: 20px;
+  }
+  .optionBottomText {
+    font-size: 15px;
+  }
+  .locationCityBox img {
+    width: 42px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .mini_photo_wrapper {
+    display: none;
+  }
+  .locationCityBox img {
+    width: 42px;
+  }
+  .postToprightInfosBox p {
+    text-align: start;
+    font-size: 14px;
+  }
+  .postToprightInfosBox span {
+    font-size: 13px;
+  }
+  .locationCityBox select {
+    width: 120px !important;
+  }
+  .createPostSelect {
+    width: 200px;
+    font-size: 16px;
+  }
+  .createPostTypeSelect {
+    width: 200px;
+  }
+  .createPostTypeOption {
+    width: 100px;
+    height: 47px;
+  }
+  .createPostTypeOption span {
+    font-size: 14px;
+  }
+
+  /* image box */
+  .createPostImageWrapper img {
+    width: 45%;
+  }
+  .tokenRequiredTextBox {
+    gap: 2px;
+  }
+  .tokenRequiredTextBox p {
+    font-size: 14px;
+  }
+  .totalBalance {
+    font-size: 15px;
+  }
+  .contentRightOptionsBottom img {
+    width: 30px;
+  }
+  .postBtn {
+    width: 97px;
+    height: 45px;
+    font-size: 14px;
+  }
+  .backBtn {
+    width: 128px;
+    height: 45px;
+  }
+  .backBtn span {
+    font-size: 12px;
+  }
+  .backBtn img {
+    width: 20px;
+  }
+  .vbtTextBottom {
+    font-size: 13px;
+  }
+  .minimumVBTwarnText {
+    font-size: 10px;
+  }
+  .createPostBottomContent {
+    margin-top: 3rem;
+  }
+  /* vbt box */
+  .vbtBox p {
+    width: 40px;
+  }
+
+  .catBannerBtnWrapper {
+    width: 160px;
+    height: 45px;
+  }
+  .catBtnOption {
+    width: 80px;
+    height: 41px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .bottomfirstContent {
+    gap: 2rem;
+    flex-direction: column-reverse;
+  }
+  .createPostBottomContent {
+    align-items: flex-end;
+  }
+  .createPost_left_input {
+    height: 50px;
+    font-size: 14px;
+  }
+  .createPost_description {
+    font-size: 14px;
+  }
+  .createPostImageWrapper {
+    display: none;
+  }
+  .mini_photo_wrapper {
+    width: 100%;
+    height: 160px;
+    display: block;
+  }
+  .mini_photo_wrapper .createPostImageWrapper {
+    width: 100% !important;
+    height: 150px;
+
+    display: grid;
+  }
+  .locationCityBox img {
+    width: 42px;
+  }
+  .postToprightInfosBox p {
+    text-align: start;
+    font-size: 14px;
+  }
+  .postToprightInfosBox span {
+    font-size: 13px;
+  }
+  .locationCityBox select {
+    width: 120px !important;
+  }
+  .createPostSelect {
+    width: 200px;
+    font-size: 16px;
+  }
+
+  .createPostTypeOption {
+  }
+  .createPostTypeOption span {
+    font-size: 14px;
+  }
+
+  /* image box */
+  .createPostImageWrapper img {
+    width: 30%;
+  }
+  .tokenRequiredTextBox {
+    gap: 2px;
+  }
+  .tokenRequiredTextBox p {
+    font-size: 14px;
+  }
+  .totalBalance {
+    font-size: 15px;
+  }
+  .contentRightOptionsBottom img {
+    width: 30px;
+  }
+  .postBtn {
+    width: 89px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .backBtn {
+    width: 89px;
+    height: 40px;
+  }
+  .backBtn span {
+    font-size: 12px;
+  }
+  .backBtn img {
+    width: 20px;
+  }
+  .vbtTextBottom {
+    font-size: 13px;
+  }
+  .minimumVBTwarnText {
+    font-size: 10px;
+  }
+  .createPostBottomContent {
+    margin-top: 3rem;
+  }
+  /* vbt box */
+  .vbtBox p {
+    width: 40px;
+  }
+
+  .createPostContentWrapper_left {
+    flex: 1;
+  }
+  .cratePostContentRight {
+    flex: 1;
+  }
+  .createPostContentWrapper {
+    gap: 1rem;
+  }
+  .createPostRightInputsBox {
+    padding: 0 15px;
+  }
+  /* inventory option box */
+
+  .inventoryOptionBox {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    height: auto;
+  }
+  .inventoryLeftBox {
+    width: 100%;
+  }
+  .inventoryRightBox {
+    width: 100%;
+  }
+  .inventoryLeftBox p,
+  .inventoryRightBox p {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+  .catBannerBtnWrapper {
+    width: 100%;
+    height: 45px;
+  }
+  .catBtnOption {
+    height: 41px;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 600px) {
+  .createPostBottomContent {
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .bottomfirstContent {
+    gap: 1rem;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .createPostBottomVBTInfoTextBox {
+    text-align: start;
+  }
+  .minimumVBTwarnText {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  .vbtTextBottom {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .createPost_left_input,
+  .createPost_description,
+  .createPostSelect,
+  .createPostTypeOption span,
+  .priceSettingBox input {
+    font-size: 13px;
+  }
+  .priceSettingBox input::placeholder {
+    font-size: 13px;
+  }
+  .createPostRightInputsBox {
+    padding: 0 15px;
+  }
+  .createPostImageWrapper {
+    display: none;
+  }
+  .mini_photo_wrapper {
+    width: 100%;
+    height: 300px;
+    display: block;
+  }
+  .mini_photo_wrapper .createPostImageWrapper {
+    width: 100% !important;
+    height: 150px;
+
+    display: grid;
+  }
+  .createPostWrapper img {
+    width: 35%;
+  }
+  .createPostTopBox {
+    flex-direction: column;
+    padding: 10px;
+    gap: 1rem;
+    height: auto;
+  }
+  .createPostTopLeftWrapper {
+    width: 100%;
+  }
+  .postTopRightHeader {
+    font-size: 16px;
+  }
+  .postToprightInfosBox {
+    font-size: 14px;
+  }
+  .locationCityBox img {
+    width: 35px;
+  }
+  .createPostTopRight {
+    width: 100%;
+  }
+  .createPostContentWrapper_left {
+    flex: 1;
+  }
+  .cratePostContentRight {
+    flex: 1;
+  }
+  .createPostContentWrapper {
+    gap: 1rem;
+  }
+  .mini_photo_wrapper {
+    display: flex;
+    gap: 10px !important;
+    align-items: flex-start;
+    height: 200px;
+    flex-direction: column !important;
+  }
+  .vbtTokenImg {
+    width: 25px !important;
+  }
+  .minBtn,
+  .maxBtn {
+    width: 25px !important;
+  }
+  .backBtn,
+  .postBtn {
+    width: 100px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .folderImg {
+    width: 27% !important;
+  }
+  .tokenRequiredTextBox p {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .totalBalance {
+    font-size: 12px !important;
+  }
+  /* inventory option box */
+
+  .inventoryOptionBox {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    height: auto;
+  }
+  .inventoryLeftBox {
+    width: 100%;
+  }
+  .inventoryRightBox {
+    width: 100%;
+  }
+  .inventoryLeftBox p,
+  .inventoryRightBox p {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+  .catBannerBtnWrapper {
+    width: 100%;
+    height: 45px;
+  }
+  .catBtnOption {
+    height: 41px;
+    width: 50%;
+  }
+  .catBtnOption span {
+    font-size: 9px;
+  }
+  .websiteAndpriceBox {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .createPostBottomContent {
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .bottomfirstContent {
+    gap: 1rem;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .createPostBottomVBTInfoTextBox {
+    text-align: start;
+  }
+  .minimumVBTwarnText {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  .vbtTextBottom {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .createPost_left_input,
+  .createPost_description,
+  .createPostSelect,
+  .createPostTypeOption span,
+  .priceSettingBox input {
+    font-size: 13px;
+  }
+  .createPost_left_input {
+    height: 45px;
+  }
+  .createPostWrapper img {
+    width: 35%;
+  }
+  .priceSettingBox input::placeholder {
+    font-size: 13px;
+  }
+  .createPostRightInputsBox {
+    gap: 1.4rem;
+    padding: 0 15px;
+  }
+  .createPostImageWrapper {
+    display: none;
+  }
+  .mini_photo_wrapper {
+    width: 100%;
+    height: 200px;
+    height: 300px;
+    display: flex;
+  }
+  .mini_photo_wrapper .createPostImageWrapper {
+    width: 100% !important;
+    height: 130px;
+
+    display: grid;
+  }
+  .postLocationText {
+    display: none;
+  }
+  .select_boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .createPostTopBox {
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 1rem;
+    height: auto;
+  }
+  .createPostTopLeftWrapper {
+    width: 100%;
+  }
+  .postTopRightHeader {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .postToprightInfosBox {
+    font-size: 10px;
+  }
+  .locationCityBox img {
+    width: 55px;
+  }
+  .createPostTopRight {
+    width: 100%;
+  }
+  .postLocationCityCountryBox {
+    width: 100%;
+  }
+  .createPostContentWrapper_left {
+    flex: 1;
+  }
+  .cratePostContentRight {
+    flex: 1;
+  }
+  .createPostContentWrapper {
+    gap: 1rem;
+  }
+  .createPostContentWrapper {
+    flex-direction: column;
+  }
+  .createPostContentWrapper_left_header {
+    font-size: 14px;
+    align-self: flex-start;
+    text-align: start;
+    letter-spacing: 1px;
+  }
+  .locationCityBox {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .locationCityBox .select_boxes {
+    flex: 6;
+  }
+  .select_boxes select {
+    width: 100%;
+    height: 35px;
+    font-size: 12px;
+  }
+  .createPostRightInputsItem {
+    gap: 0.4rem;
+  }
+  .label {
+    font-size: 12px;
+  }
+  .mini_photo_wrapper {
+    display: flex;
+    height: 200px;
+    gap: 10px !important;
+    align-items: flex-start;
+    flex-direction: column !important;
+  }
+  .contentRightOptionsBottom {
+    gap: 1rem;
+  }
+  .contentRightOptionsBottom img {
+    width: 30px;
+  }
+  .tokenRequiredTextBox p {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .totalBalance {
+    font-size: 12px !important;
+  }
+  .tokenRequiredTextBox {
+    gap: 2px;
+  }
+  .createPost_description {
+    height: 130px;
+  }
+  .createPostWrapper {
+    padding: 1rem;
+  }
+  .vbtTokenImg {
+    width: 25px !important;
+  }
+  .minBtn,
+  .maxBtn {
+    width: 25px !important;
+  }
+  .backBtn,
+  .postBtn {
+    width: 100px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .folderImg {
+    width: 27% !important;
+  }
+  /* inventory option box */
+
+  .inventoryOptionBox {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    height: auto;
+  }
+  .inventoryLeftBox {
+    width: 100%;
+  }
+  .inventoryRightBox {
+    width: 100%;
+  }
+  .inventoryLeftBox p,
+  .inventoryRightBox p {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+  .catBannerBtnWrapper {
+    width: 100%;
+    height: 45px;
+  }
+  .catBtnOption {
+    height: 41px;
+    width: 50%;
+  }
+  .catBtnOption span {
+    font-size: 9px;
+  }
+  .websiteAndpriceBox {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cratePostContentRight {
+    padding: 0 2rem;
+  }
+  .contentRightTop {
+    gap: 4rem;
+  }
+}

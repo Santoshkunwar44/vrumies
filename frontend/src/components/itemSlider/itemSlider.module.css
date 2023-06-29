@@ -1,0 +1,76 @@
+.slideActive {
+  color: white;
+  background-color: green;
+}
+.slide {
+}
+.sliderArrow {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  top: 7rem;
+  z-index: 33;
+}
+.sliderArrow img {
+  width: 30px;
+}
+
+.rightArrow {
+  right: 1.5rem;
+  text-align: end;
+}
+.leftArrow {
+  left: 1.5rem;
+  text-align: start;
+}
+.postImgSlider {
+  width: 120px !important;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.slider_items {
+  width: 100% !important;
+}
+@media screen and (max-width: 480px) {
+  .sliderWrapper,
+  .loaderBox {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 600px) {
+  .sliderWrapper,
+  .loaderBox {
+    width: 600px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 780px) {
+  .sliderWrapper,
+  .loaderBox {
+    width: 550px;
+  }
+}
+@media screen and (min-width: 780px) and (max-width: 992px) {
+  .sliderWrapper,
+  .loaderBox {
+    width: 550px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .sliderWrapper,
+  .loaderBox {
+    width: 550px;
+  }
+}
+/* @media screen {
+  
+} */
+@media screen and (min-width: 1200px) {
+  .sliderWrapper,
+  .loaderBox {
+    width: 960px;
+  }
+}

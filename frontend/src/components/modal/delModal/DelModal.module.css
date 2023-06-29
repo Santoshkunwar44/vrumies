@@ -1,0 +1,48 @@
+.modalOverlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalbody {
+  background-color: #000000;
+  color: white;
+  padding: 2rem;
+  width: 450px;
+  position: relative;
+  height: 400px;
+  justify-content: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  padding-top: 1rem;
+  box-shadow: rgb(28 28 28) -1px 3px 20px 0px,
+    rgb(78 77 77 / 48%) 0px 0px 0px 1px;
+}
+.ModalDelete {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.confirmDelete {
+  padding: 0 10px;
+  width: 200px;
+  background: #37e710;
+}
+.ModalDelete p {
+  color: #ababab;
+
+  font-size: 12px;
+}
+.modalbody img {
+  position: absolute;
+  top: 1rem;
+  cursor: pointer;
+  width: 50px;
+  right: 1rem;
+}

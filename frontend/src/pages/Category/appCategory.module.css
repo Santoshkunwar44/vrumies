@@ -1,0 +1,483 @@
+.appCategorybanner {
+  background-image: url("../../../public/images/categoryBg.webp");
+  height: 486px;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+.appCategoryWrapper {
+  flex: 9;
+}
+
+.categoryBannerBgBlur {
+  background: linear-gradient(180deg, #000000e6 0%, rgba(0, 0, 0, 0) 100%);
+  /* -webkit-backdrop-filter: blur(4px); */
+  backdrop-filter: blur(1px);
+  transform: rotate(-180deg);
+  position: absolute;
+  width: 102%;
+  height: 102%;
+  box-sizing: border-box;
+}
+.categoryContentWrapper {
+  padding: 1rem;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.categoryItemLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+  flex: 8;
+}
+.categoryIconRight {
+  flex: 4;
+}
+.categoryTitleText {
+  text-align: start;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 96px;
+  /* or 123% */
+
+  letter-spacing: -0.24px;
+  text-transform: uppercase;
+
+  color: #37e710;
+}
+.catBannerBtnWrapper {
+  width: 370px;
+  height: 55px;
+
+  background: #001219;
+  border: 1px solid #c1c1c14d;
+
+  border-radius: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3px;
+}
+.catBannerBtnWrapperBox {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+}
+.catBtnOption {
+  width: 173px;
+  height: 53px;
+  background-color: transparent;
+  border-radius: 46px;
+  border: none;
+  outline: none;
+}
+.catBtnOption span {
+  font-style: normal;
+  font-family: "poppins";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height, or 106% */
+  text-align: center;
+  letter-spacing: -0.084px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.activeCatOption {
+  background-color: #37e710;
+}
+.activeCatOption span {
+  opacity: 1;
+  color: #001219;
+}
+.catItemImg {
+  width: 84px;
+}
+.appCatPopularPostHeader {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.appCatPostWrapper {
+  padding: 2rem;
+}
+.appCatHeaderHrLine {
+  flex: 1;
+  height: 4px;
+  background-color: #ffffff;
+}
+.appCatBackText {
+  color: #37e710;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 28px;
+  /* identical to box height */
+
+  letter-spacing: 0.12em;
+
+  color: #37e710;
+}
+.mostPopularText {
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 18px;
+  /* identical to box height, or 39% */
+
+  text-align: center;
+  letter-spacing: -0.084px;
+
+  color: #ffffff;
+}
+.postWrappers {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  min-height: 400px;
+  padding-top: 2rem;
+}
+/* filterLocationButton */
+.filterLocationButton {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  flex-direction: column;
+}
+.filterLocationButton p {
+  font-size: 12px;
+  color: #37e710;
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+.filterLocationButton button {
+  padding: 0px 10px;
+  background: #000000;
+  border: 2px solid #37e710;
+  color: #37e710;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.filterLocationButton button img {
+  width: 30px;
+}
+/* filterByLocation */
+.filterByLocation {
+  padding: 0px 10px;
+  background: #000000;
+  border: 2px solid #37e710;
+  color: #37e710;
+  display: flex;
+  gap: 1rem;
+  height: 47px;
+  align-items: center;
+  border-radius: 4px;
+}
+.filterByLocation img {
+  width: 30px;
+}
+.categoryItemTopcontent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.categoryItemTopcontent img {
+  display: none;
+}
+.popularHeaderTextBoxLeft {
+  display: flex;
+  flex: 6;
+  gap: 2rem;
+  align-items: center;
+}
+.popularHeaderTextBoxRight {
+  width: 100%;
+  display: flex;
+  flex: 6;
+  align-items: center;
+  gap: 1rem;
+}
+.mini_filteby_location {
+  display: none;
+}
+.app_main_wrapper {
+  display: flex;
+  margin-top: 100px;
+}
+@media screen and (max-width: 600px) {
+  .appCatPostWrapper {
+    padding: 1rem;
+  }
+  .max_filter_box {
+    display: none;
+  }
+  .appCatHeaderHrLine {
+  }
+  .postWrappers {
+    justify-content: center;
+  }
+  .appCatPopularPostHeader {
+    align-items: center;
+    gap: 1rem;
+  }
+  .popularHeaderTextBoxRight {
+  }
+  .popularHeaderTextBoxLeft {
+  }
+  .categoryItemTopcontent {
+  }
+  .categoryItemTopcontent img {
+    display: block;
+    width: 60px !important;
+  }
+  .categoryIconRight {
+    display: none;
+  }
+  .appCategorybanner {
+    height: 280px;
+    background-position: center;
+  }
+  .categoryTitleText {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .catBannerBtnWrapper {
+    width: 217px;
+    height: 42px;
+  }
+  .catBtnOption {
+    width: 106px;
+    height: 38px;
+  }
+  .catBtnOption span {
+    font-size: 10px;
+  }
+  .catItemImg {
+    width: 80px;
+  }
+  .categoryItemTopcontent img {
+    width: 60px !important;
+  }
+  .mostPopularText {
+    font-size: 16px;
+    letter-spacing: 1.04px;
+  }
+  .filterByLocation {
+    height: 39px;
+    font-size: 12px;
+  }
+  .filterByLocation img {
+    width: 20px;
+  }
+  .appCatHeaderHrLine {
+    height: 2px;
+  }
+  .appCatPopularPostHeader {
+    gap: 1rem;
+  }
+  .appCatBackText {
+    font-size: 12px;
+  }
+  .catBannerBtnWrapperBox {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+  .popularHeaderTextBoxRight {
+    justify-content: flex-end;
+  }
+  .categoryContentWrapper {
+    padding: 1rem;
+  }
+  .mini_filteby_location {
+    display: block;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 780px) {
+  .max_filter_box {
+    display: none;
+  }
+  .appCategorybanner {
+    height: 350px;
+  }
+  .categoryTitleText {
+    font-size: 35px;
+    line-height: 70px;
+  }
+  .catBannerBtnWrapper {
+    width: 270px;
+    height: 59px;
+  }
+  .catBtnOption {
+    width: 130px;
+  }
+  .catBtnOption span {
+    font-size: 12px;
+  }
+  .catItemImg {
+    width: 60px;
+  }
+  .mostPopularText {
+    font-size: 30px;
+  }
+  .filterByLocation {
+    height: 45px;
+    font-size: 14px;
+  }
+  .filterByLocation img {
+    width: 20px;
+  }
+  .appCatHeaderHrLine {
+    height: 2px;
+  }
+  .categoryIconRight {
+    display: none;
+  }
+  .categoryItemTopcontent {
+    justify-content: start;
+    gap: 3rem;
+  }
+  .categoryItemTopcontent img {
+    display: block;
+    width: 75px;
+  }
+  .mini_filteby_location {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .mini_filteby_location {
+    display: none;
+  }
+  .appCategorybanner {
+    height: 350px;
+  }
+  .categoryTitleText {
+    font-size: 55px;
+    line-height: 70px;
+  }
+  .catBannerBtnWrapper {
+    width: 270px;
+    height: 59px;
+  }
+  .catBtnOption {
+    width: 130px;
+  }
+  .catBtnOption span {
+    font-size: 12px;
+  }
+  .catItemImg {
+    width: 60px;
+  }
+  .mostPopularText {
+    font-size: 30px;
+  }
+  .filterByLocation {
+    height: 45px;
+    font-size: 14px;
+  }
+  .filterByLocation img {
+    width: 20px;
+  }
+  .appCatHeaderHrLine {
+    height: 2px;
+  }
+  .categoryIconRight {
+    display: none;
+  }
+  .categoryItemTopcontent {
+    justify-content: start;
+    gap: 3rem;
+  }
+  .categoryItemTopcontent img {
+    display: block;
+    width: 75px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .categoryTitleText {
+    font-size: 45px;
+  }
+  .categoryIconRight {
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .catItemImg {
+    width: 120px;
+  }
+  .mini_filteby_location {
+    display: none;
+  }
+  .categoryItemTopcontent img {
+    display: none;
+    width: 75px;
+  }
+  .catBtnOption {
+    width: 50%;
+    height: 100%;
+  }
+  .catBannerBtnWrapper {
+    width: 230px;
+    height: 55px;
+  }
+  .mostPopularText {
+    letter-spacing: 1.05px;
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .categoryTitleText {
+    font-size: 65px;
+  }
+  .categoryIconRight {
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .catItemImg {
+    width: 180px;
+  }
+  .mini_filteby_location {
+    display: none;
+  }
+  .categoryItemTopcontent img {
+    display: none;
+    width: 75px;
+  }
+  .catBtnOption {
+    width: 50%;
+    height: 100%;
+  }
+  .catBannerBtnWrapper {
+    width: 250px;
+    height: 65px;
+  }
+  .mostPopularText {
+  }
+}

@@ -1,0 +1,133 @@
+.todo_list_container {
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  gap: 10px;
+}
+.focus_title {
+  /* border: 1px solid rgb(255, 255, 255); */
+  padding: 4px;
+  outline: 1px solid #37e710;
+}
+
+.edit_btn {
+  padding: 0 10px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: #001219;
+  color: white;
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  margin-left: auto;
+}
+.todo_content {
+  height: 50%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(51.5px);
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+.edit_btn img {
+  width: 15px;
+}
+.edit_btn p {
+  letter-spacing: 4px;
+}
+.today_text {
+  text-align: start;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #37e710;
+  margin-bottom: 10px;
+}
+.things_todo_text {
+  text-align: start;
+  color: black;
+  text-transform: capitalize;
+  -webkit-text-stroke: 1px #949494;
+}
+.todo_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding-left: 10px;
+}
+.todo_body {
+  overflow-y: scroll  ;
+  height: 80%;
+}
+.todo_body::-webkit-scrollbar{
+  width: 5px;
+  display: none;
+}
+/* .todo  */
+.todo_body input {
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  background-color: #151515;
+  border-radius: 4px;
+
+  width: 100%;
+  height: 40px;
+  color: grey;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 0 10px;
+  padding-left: 5px;
+}
+.todo_body input::placeholder {
+  font-size: 11px;
+}
+.todo_list li {
+  position: relative;
+  text-align: start;
+  font-size: 12px;
+  color: grey;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  cursor: pointer;
+  height: 30px;
+}
+.todo_list li:hover {
+  background-color: #151515;
+}
+.remove_note_icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  color: #37e710;
+  font-size: 1.2rem;
+}
+.remove_note_icon:hover {
+  background-color: #37e710;
+  color: white !important;
+}
+.todo_list li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #37e710a8; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1rem;
+  margin-left: -3px; /* Also needed for space (tweak if needed) */
+  text-align: start;
+}
+.todo_header {
+  padding-top: 10px;
+}
+.todos_initial_text {
+  color: rgba(128, 128, 128, 0.637);
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}

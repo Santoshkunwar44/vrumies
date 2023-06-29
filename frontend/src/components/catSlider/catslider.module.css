@@ -1,0 +1,61 @@
+.slideActive {
+  color: white;
+  background-color: green;
+}
+.slide {
+  background-color: red;
+}
+.catArrows {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  top: 3rem;
+  z-index: 33;
+}
+.catArrows img {
+  width: 50px;
+}
+
+.rightArrow {
+  right: 1.5rem;
+  text-align: end;
+}
+.leftArrow {
+  left: 1.5rem;
+
+  text-align: start;
+}
+/* notFocus */
+.notFocus {
+  pointer-events: none !important;
+  scale: 0.7 !important;
+  opacity: 0.7 !important;
+}
+.focusCat {
+  opacity: 1 !important;
+  scale: 1 !important;
+  pointer-events: initial !important;
+}
+
+.center {
+  width: 100% !important;
+}
+.slickSlider {
+  width: 100% !important;
+}
+@media screen and (max-width: 600px) {
+  .catArrows img {
+    width: 40px !important;
+  }
+  .rightArrow {
+    right: 0;
+    text-align: end;
+  }
+  .leftArrow {
+    left: 0;
+
+    text-align: start;
+  }
+}
