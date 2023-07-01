@@ -13,12 +13,10 @@ export const CalenderLayout = () => {
         <div className={"calender_container"}>
 
             <Calendar
-            goToRangeStartOnSelect={true}
-             tileClassName={"itemBox"} 
+              tileClassName={"itemBox"} 
              className={"calenderBox"}
              onChange={onChange} 
-             selectRange={true}
-             value={value}
+              value={value}
              />
 
             <TodoList 

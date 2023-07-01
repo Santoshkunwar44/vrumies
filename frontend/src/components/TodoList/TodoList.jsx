@@ -4,6 +4,10 @@ import { useSelector } from "react-redux";
 import styles from "./TodoList.module.css";
 import { useEffect, useRef, useState } from "react";
 import TodoItem from "./TodoItem";
+import {useDispatch} from "react-redux"
+import useAlert from "../../hooks/useAlert";
+import { useToast } from "@chakra-ui/react";
+import { setToastifyInfo } from "../../redux/actions/otherAction";
 
 
 
@@ -22,7 +26,11 @@ export const TodoList = ({date}) => {
     const [editMode, setEditMode] = useState(false)
     const [inputTodo, setInputTodo] = useState("")
     const titleRef = useRef()
+    const dispatch   = useDispatch()
 
+
+
+    // const 
 
     useEffect(() => {
 
@@ -87,16 +95,31 @@ export const TodoList = ({date}) => {
 
     }
 
-    const handleAddNewNote=async()=>{
-
-        const noteId = todoListData?._id;
-        if(!date){
-            return alert("select date please");
+    const handleValidate =()=>{
+ 
+        if(new Date(date) < Date.now()){
+            // alert("please chose future date from calender !");
+                    dispatch(setToastifyInfo({
+                    type: "error",
+                    text: "Select future date from calender "
+                }))
+            return false
         }
-
+    return true
+    }
+    const handleAddNewNote=async()=>{
+        if(!handleValidate()){
+            return;
+        }
+        
+        const noteId = todoListData?._id;
+   
 
         try {
-            const {status,data} =    await addNoteItemApi(noteId,inputTodo)
+            const {status,data} =    await addNoteItemApi(noteId,{
+                text:inputTodo,
+                date:new Date(date).getTime()
+            })
             if(status===200){
 
                 setTodoListData(data.message)

@@ -2,8 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import styles from "./TodoList.module.css"
 import { updateNoteItemApi } from "../../utils/apis/note/NoteApi";
 import {IoIosTimer} from "react-icons/io";
-
-
+import moment from "moment"
 const TodoItem = ({item,noteId ,setTodoListData}) => {
 
     const [isEditing,setIsEditing] = useState(false)
@@ -56,7 +55,8 @@ const TodoItem = ({item,noteId ,setTodoListData}) => {
         <div className={styles.todoTimeBox}>
           <IoIosTimer/>
           <p>
-             12th may 2022 - 25th may 2023
+             {/* 12th may 2022 - 25th may 2023 */}
+            { moment(item.date).format('LL')}
             </p>
         </div>
         <input
