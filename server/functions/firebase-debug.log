@@ -1,0 +1,54 @@
+[debug] [2023-06-30T06:37:13.344Z] ----------------------------------------------------------------------
+[debug] [2023-06-30T06:37:13.347Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Santosh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-30T06:37:13.348Z] CLI Version:   12.4.2
+[debug] [2023-06-30T06:37:13.349Z] Platform:      win32
+[debug] [2023-06-30T06:37:13.349Z] Node Version:  v18.16.0
+[debug] [2023-06-30T06:37:13.350Z] Time:          Thu Jun 29 2023 23:37:13 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-06-30T06:37:13.350Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-30T06:37:13.477Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-30T06:37:13.478Z] > authorizing via signed-in user (santoshkunwar9454@gmail.com)
+[debug] [2023-06-30T06:37:13.478Z] [iam] checking project vrumies-santos-5af3d for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-06-30T06:37:13.481Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vrumies-santos-5af3d:testIamPermissions [none]
+[debug] [2023-06-30T06:37:13.482Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vrumies-santos-5af3d:testIamPermissions x-goog-quota-user=projects/vrumies-santos-5af3d
+[debug] [2023-06-30T06:37:13.482Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vrumies-santos-5af3d:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-06-30T06:37:15.230Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vrumies-santos-5af3d:testIamPermissions 200
+[debug] [2023-06-30T06:37:15.231Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vrumies-santos-5af3d:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-06-30T06:37:15.232Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/vrumies-santos-5af3d/serviceAccounts/vrumies-santos-5af3d@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-06-30T06:37:15.233Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/vrumies-santos-5af3d/serviceAccounts/vrumies-santos-5af3d@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-30T06:37:16.886Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/vrumies-santos-5af3d/serviceAccounts/vrumies-santos-5af3d@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-06-30T06:37:16.887Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/vrumies-santos-5af3d/serviceAccounts/vrumies-santos-5af3d@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'vrumies-santos-5af3d'...
+[info] 
+[info] i  deploying functions 
+[debug] [2023-06-30T06:37:16.901Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vrumies-santos-5af3d [none]
+[debug] [2023-06-30T06:37:17.441Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vrumies-santos-5af3d 200
+[debug] [2023-06-30T06:37:17.441Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vrumies-santos-5af3d {"projectId":"vrumies-santos-5af3d","projectNumber":"306293714465","displayName":"Vrumies-Santos","name":"projects/vrumies-santos-5af3d","resources":{"hostingSite":"vrumies-santos-5af3d"},"state":"ACTIVE","etag":"1_ecef14a0-17b7-441c-afb0-d319217b6616"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-06-30T06:37:17.447Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-06-30T06:37:17.448Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/vrumies-santos-5af3d
+[debug] [2023-06-30T06:37:17.452Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-06-30T06:37:17.452Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/vrumies-santos-5af3d
+[debug] [2023-06-30T06:37:17.455Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/cloudbuild.googleapis.com [none]
+[debug] [2023-06-30T06:37:17.455Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/cloudbuild.googleapis.com x-goog-quota-user=projects/vrumies-santos-5af3d
+[debug] [2023-06-30T06:37:17.458Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/artifactregistry.googleapis.com [none]
+[debug] [2023-06-30T06:37:17.458Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/artifactregistry.googleapis.com x-goog-quota-user=projects/vrumies-santos-5af3d
+[debug] [2023-06-30T06:37:19.535Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/cloudbuild.googleapis.com 200
+[debug] [2023-06-30T06:37:19.536Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2023-06-30T06:37:19.538Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2023-06-30T06:37:19.538Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/vrumies-santos-5af3d
+[debug] [2023-06-30T06:37:19.557Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/cloudfunctions.googleapis.com 200
+[debug] [2023-06-30T06:37:19.557Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-06-30T06:37:19.563Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/artifactregistry.googleapis.com 200
+[debug] [2023-06-30T06:37:19.563Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2023-06-30T06:37:19.564Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2023-06-30T06:37:19.564Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/vrumies-santos-5af3d
+[debug] [2023-06-30T06:37:19.606Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/runtimeconfig.googleapis.com 200
+[debug] [2023-06-30T06:37:19.606Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/vrumies-santos-5af3d/services/runtimeconfig.googleapis.com [omitted]
