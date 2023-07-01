@@ -5,11 +5,25 @@ import "./CalenderLayout.css"
 export const CalenderLayout = () => {
     const [value, onChange] = useState(new Date());
 
+  
+
+    
+
     return (
         <div className={"calender_container"}>
 
-            <Calendar tileClassName={"itemBox"} className={"calenderBox"} onChange={onChange} value={value} />
-            <TodoList />
+            <Calendar
+            goToRangeStartOnSelect={true}
+             tileClassName={"itemBox"} 
+             className={"calenderBox"}
+             onChange={onChange} 
+             selectRange={true}
+             value={value}
+             />
+
+            <TodoList 
+            date={value}
+            />
         </div>
     )
 }

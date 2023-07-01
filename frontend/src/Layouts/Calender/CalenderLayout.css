@@ -17,7 +17,7 @@
   color: #37e710 !important;
 }
 .react-calendar button:hover {
-  background-color: #001219 !important;
+  background-color: #022938 !important;
 }
 .react-calendar__month-view__weekdays {
   font-weight: 100 !important;
@@ -30,11 +30,11 @@
 
 .react-calendar button:active {
   border-radius: 50% !important;
-  background-color: #001219 !important;
-}
+  background-color: #022938;
+ }
 .react-calendar__tile--range {
   border-radius: 50% !important;
-  background-color: #001219 !important;
+    background-color: #022938 !important;
 }
 .calendar__navigation button {
   border-radius: 8px !important;

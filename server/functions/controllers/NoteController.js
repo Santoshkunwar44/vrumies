@@ -1,3 +1,4 @@
+const NoteItemModel = require("../model/NoteItemModel");
 const NoteModel = require("../model/NoteModel");
 
 class NoteController {
@@ -7,6 +8,9 @@ class NoteController {
 
 
         try {
+            if(!owner){
+                throw "owner is required"
+            }
             const usersNote = await NoteModel.findOne({ owner })
             if (usersNote) {
                 throw Error("Note already exists")
@@ -26,7 +30,7 @@ class NoteController {
         try {
             const UsersNote = await NoteModel.findOne({
                 owner
-            })
+            }).populate("note")
             res.status(200).json({ message: UsersNote, success: true })
         } catch (error) {
             res.status(500).json({ message: error.message, success: false })
@@ -53,6 +57,18 @@ class NoteController {
             res.status(200).json({ message: UsersNote, success: true })
         } catch (error) {
             res.status(500).json({ message: error.message, success: false })
+        }
+    }
+    async createNoteItem(req,res,next){
+        try {
+            const savedNoteItem = await NoteItemModel.create(req.body)  
+            req.note = savedNoteItem._id?.toString();
+            console.log(savedNoteItem._id?.toString())
+            next();
+        } catch (error) {
+
+            return res.status(500).json({message:error.message,success:false})   
+
         }
     }
     async deleteNewNoteItem(req, res) {
@@ -90,30 +106,47 @@ class NoteController {
             res.status(500).json({ message: error.message, success: false })
         }
     }
-    async updateNewNoteItem(req, res) {
-
-        const { userId: owner } = req.query
-        const { note } = req.body
-
-
+    async pushNewNote(req, res) {
+console.log("inside",req.note)
+        const { noteId } = req.query
+        const note = req.note;
         // api/note?userId=34343
         try {
-            if (!owner || !note) {
+            if (!noteId || !note) {
                 throw Error("Fill all the required fields")
             }
-            console.log("hello ", note)
-            const UsersNote = await NoteModel.findOneAndUpdate({ owner }, {
-                $push: { note: note }
-            })
+            const UsersNote = await NoteModel.findByIdAndUpdate(noteId, {
+                $push: { note :note  }
+            },
+            {
+                new:true,
+                returnOriginal:false,
+                returnDocument:true
+            }).populate("note")
 
-            if (UsersNote) {
 
                 res.status(200).json({ message: UsersNote, success: true })
-            } else {
-                throw Error("Something went wrong!!")
-            }
+       
         } catch (error) {
             res.status(500).json({ message: error.message, success: false })
+        }
+    }
+    async updateNoteItem(req,res){
+        const {noteItemId }= req.query;
+
+        try {
+                 await  NoteItemModel.findByIdAndUpdate(noteItemId,{
+                        $set:req.body
+                });
+
+                const updatedNote=  await NoteModel.findOne({note:{$in:[noteItemId]}}).populate("note")
+                res.status(200).json({message:updatedNote,success:true})
+
+
+
+
+        } catch (error) {
+            res.status(500).json({message:error.message,success:false})            
         }
     }
 }

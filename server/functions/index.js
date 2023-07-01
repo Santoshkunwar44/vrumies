@@ -16,7 +16,8 @@ const morgan = require("morgan")
 const passport = require("passport")
 const path = require("path")
 const fs = require("fs")
-console.log(process.env.FRONTEND_URL)
+console.log(process.env.NODE_ENV ==="production")
+
 
 app.use(cors({
     origin: [
@@ -81,10 +82,9 @@ app.use(session({
     saveUninitialized: true,
     store,
     cookie: {
-        secure:true,
+        secure:process.env.NODE_ENV === "production",
         maxAge: 31556952000,
         httpOnly: true,
-        sameSite:"none"
     },
 }))
 

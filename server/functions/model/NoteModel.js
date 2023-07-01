@@ -9,7 +9,12 @@ const NoteSchema = mongoose.Schema({
         type: String,
         min: [3, "Title be more than 3 characters long"],
     },
-    note: Array,
+    note: [
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"NoteItem",
+        }
+    ],
 }, {
     timestamps: true
 })

@@ -8,6 +8,7 @@
 ::-webkit-scrollbar{
   width: 5px;
 }
+/* ::-webkitbot  */
 ::-webkit-scrollbar-thumb {
     background: #37e710a2 !important;
     border-radius: 20px !important; 

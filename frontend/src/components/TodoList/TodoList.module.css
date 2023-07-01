@@ -44,24 +44,29 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #37e710;
+  /* color: white; */
   margin-bottom: 10px;
+
 }
 .things_todo_text {
   text-align: start;
-  color: black;
   text-transform: capitalize;
-  -webkit-text-stroke: 1px #949494;
+  color: white;
 }
 .todo_list {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1.5rem;
   list-style: none;
-  padding-left: 10px;
 }
+
 .todo_body {
-  overflow-y: scroll  ;
-  height: 80%;
+  /* overflow-y: scroll  ; */
+  /* height: 80%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .todo_body::-webkit-scrollbar{
   width: 5px;
@@ -72,33 +77,61 @@
   margin: 10px 0;
   border: none;
   outline: none;
-  background-color: #151515;
+  background-color: #282727;
   border-radius: 4px;
+  /* display: none; */
 
   width: 100%;
-  height: 40px;
+  height: 40px !important;
   color: grey;
   letter-spacing: 1px;
   font-size: 12px;
   padding: 0 10px;
-  padding-left: 5px;
+}
+.itemTextInput{
+  display: none;
+}
+.showInput{
+  display: block !important;
+  height: 40px !important;
 }
 .todo_body input::placeholder {
   font-size: 11px;
 }
-.todo_list li {
+.todoItem {
   position: relative;
   text-align: start;
   font-size: 12px;
-  color: grey;
+  /* color: grey; */
+  color: #37e710bc;
   display: flex;
   align-items: center;
   padding-right: 10px;
   cursor: pointer;
-  height: 30px;
+  height: 55px;
+  max-width: 100% ;
+  gap: 5px;
+ flex-direction: column; 
+ border: 1px solid #37e710a9;
+ background-color: #151515 !important;
+ border-radius:3px;
+ padding: 10px;
 }
-.todo_list li:hover {
-  background-color: #151515;
+
+.todoItem:hover {
+}
+.todoItem input, .todoItem div {
+  height: 100%;
+  /* background-color: #151515; */
+  width: 100%;
+}
+.todoItemText{
+  width: 100%;
+  height: 100%;
+  display: flex;
+align-items: center;
+padding: 0 5px;
+
 }
 .remove_note_icon {
   position: absolute;
@@ -106,7 +139,7 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  color: #37e710;
+  color: #37e710bf;
   font-size: 1.2rem;
 }
 .remove_note_icon:hover {
@@ -130,4 +163,23 @@
   font-size: 12px;
   letter-spacing: 1px;
   margin-top: 1rem;
+}
+.note_info_text{
+  text-align: start;
+  font-size: 10px;
+  letter-spacing: 1px;
+  /* margin: 10px 0; */
+  margin-bottom: 10px;
+  color: #37e710;
+}
+
+.todoTimeBox{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+}
+.todoTimeBox p{
+  font-size: 9px;
+  /* letter-spacing: 1px; */
 }

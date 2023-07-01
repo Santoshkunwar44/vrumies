@@ -40,7 +40,7 @@ const LogoutPop = ({ children }) => {
 
     }
     return (
-        <Popover autoFocus={false} >
+        <Popover  >
             <PopoverTrigger>
                 <span style={{ cursor: "pointer" }}>{children}</span>
             </PopoverTrigger>
