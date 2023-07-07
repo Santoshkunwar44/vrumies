@@ -63,18 +63,18 @@ const Mypost = ({ itemWidth }) => {
             <div className={styles.myPostItem}>
 
                 <div className={styles.postHeaderTopic}>
-                    <h2>My  Post Advertisements</h2>
+                    <h2>Post Advertisements</h2>
                     <div className={styles.postheaderHrLine}>
                     </div>
                 </div>
                 <div className={styles.postItemWrapper}>
-                    <ItemSlider sliderWidth={itemWidth} isLoading={loading?.isLoading && loading.path === "profilePost"} type={"post"} items={myAdvertisePostList} />
+                    <ItemSlider sliderWidth={itemWidth} isLoading={loading?.isLoading && loading.path === "profilePost"} type={"post"} items={myAdvertisePostList} imagePath={"postCard"} />
                 </div>
             </div>
             <div className={styles.myPostItem}>
 
                 <div className={styles.postHeaderTopic}>
-                    <h2>My Post Request</h2>
+                    <h2>Post Request</h2>
                     <div className={styles.postheaderHrLine}>
                     </div>
                 </div>
@@ -84,12 +84,12 @@ const Mypost = ({ itemWidth }) => {
             </div>
             <div className={styles.myPostItem}>
                 <div className={styles.postHeaderTopic}>
-                    <h2>My Price Quotes</h2>
+                    <h2>Price Quotes</h2>
                     <div className={styles.postheaderHrLine}>
                     </div>
                 </div>
                 <div className={styles.postItemWrapper}>
-                    <ItemSlider sliderWidth={itemWidth} isLoading={loading?.isLoading && loading.path === "profilePost"} type="reply" items={myReplyQuotesList} />
+                    <ItemSlider sliderWidth={itemWidth} isLoading={loading?.isLoading && loading.path === "profilePost"}imagePath={"priceIMg"} type="reply" items={myReplyQuotesList} />
                 </div>
 
             </div>

@@ -7,7 +7,8 @@ import { startRefresh } from "../../../../redux/actions/otherAction";
 const ShopItem = ({ item }) => {
     const [isOpen, setIsOpen] = useState(false);
     const dispatch = useDispatch()
-    const handleDelete = async () => {
+    const handleDelete = async (e) => {
+        e.stopPropagation();
         try {
             const res = await deleteShopItemApi(item?._id);
             if (res.status === 200) {

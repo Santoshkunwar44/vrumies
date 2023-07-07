@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 const shopSchema = mongoose.Schema({
     title: {
         type: String,
-        required: [true, "title is required"]
+        // required: [true, "title is required"]
 
     },
     description: {

@@ -148,11 +148,16 @@ export const TodoList = ({date}) => {
 
                 <div className={styles.todo_header}>
                     <h4 
-                    className={`${styles.today_text} ${editMode ? styles.focus_title : ""}`} contentEditable={editMode} ref={titleRef}
-                    >      {todoListData?.title ? todoListData.title : moment(Date.now()).format("LL")}</h4>
-                    <h2 className={styles.things_todo_text}>THINGS TO DO </h2>
+                    className={`${styles.today_text} ${editMode ? styles.focus_title : ""}`} contentEditable={editMode} 
+                    ref={titleRef}
+                    >    
+                      {todoListData?.title ? todoListData.title : moment(Date.now()).format("LL")}</h4>
+                    <h2
+                     className={styles.things_todo_text}>THINGS TO DO </h2>
                 </div>
-                <div className={styles.todo_body}>
+                <div 
+                className={styles.todo_body}
+                >
                     <p className={styles.note_info_text}>double click to edit </p>
                     <input
                     className={styles.addNoteInput}

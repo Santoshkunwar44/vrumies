@@ -50,11 +50,13 @@ const AddNewItem = React.memo(({ close, activeItem }) => {
     }
 
     const handleSubmit = async (url) => {
+
+        
+
         let reqBody = {
             ...newShopItemState, photos: url
         }
         // api request 
-        console.log("submintting", reqBody)
         try {
             const res = await addNewShopItemApi(reqBody)
             if (res.status === 200) {
@@ -69,7 +71,8 @@ const AddNewItem = React.memo(({ close, activeItem }) => {
         }
     }
 
-    const handleStartUpload = () => {
+    const handleStartUpload = (e) => {
+        e.preventDefault();
         if (!newShopItemState.photos || !newShopItemState.photos?.length > 0) {
             console.log("No photos found")
         } else {
@@ -79,27 +82,25 @@ const AddNewItem = React.memo(({ close, activeItem }) => {
 
     return (
         <>
-            {
 
+            {
+                
                 startUpload && <UploadDocsLayout isDocs={false} docs={newShopItemState.photos} cb={handleSubmit} closeUploadDocsUi={() => setStartUpload(false)} />
             }
+                <form onSubmit={handleStartUpload}>
             <div className={styles.new_shop_item} >
                 <div className={styles.shop_sub_item}>
                     <p>ITEM:</p>
-                    <input onChange={handleChange} type="text" name="title" placeholder='Add name' />
+                    <input  required onChange={handleChange} type="text" name="title" placeholder='Add name' />
                 </div>
                 <div className={styles.shop_sub_item}>
                     <p>QUANTITY:</p>
-                    <input value={newShopItemState.quantity} onChange={handleNumberInputChange} type="number" name="quantity" placeholder='Add Quantity' />
+                    <input  required value={newShopItemState.quantity} onChange={handleNumberInputChange} type="number" name="quantity" placeholder='Add Quantity' />
                 </div>
                 <div className={styles.shop_sub_item}>
                     <p>PRICE:</p>
-                    <input value={newShopItemState.price} onChange={handleNumberInputChange} type="number" name="price" placeholder='select price' />
+                    <input  required value={newShopItemState.price} onChange={handleNumberInputChange} type="number" name="price" placeholder='select price' />
                 </div>
-
-
-
-
             </div>
             <div className={styles.new_shop_item_details}>
 
@@ -113,12 +114,7 @@ const AddNewItem = React.memo(({ close, activeItem }) => {
                                 <div className={styles.image_box_wrapper}>
 
                                     <img onClick={() => inputFileRef.current.click()} draggable={"false"} src="/icons/gallary.png" alt="gallaryIcon" />
-
-                                    <div className={styles.image_content}>
-                                        <p>Add New Photo</p>
-                                        <p>Delete Photo</p>
-                                    </div>
-                                    <input style={{ display: "none" }} multiple ref={inputFileRef} type="file" name="photos" onChange={handleChange} />
+                                    <input  required style={{ display: "none" }} multiple ref={inputFileRef} type="file" name="photos" onChange={handleChange} />
                                 </div>
                             </div>
                             <div className={styles.right_content_wrapper}>
@@ -126,15 +122,15 @@ const AddNewItem = React.memo(({ close, activeItem }) => {
 
                                 <div className={styles.right_content_side}>
 
-                                    <p>Description</p>
-                                    <input onChange={handleChange} type="text" name="description" placeholder='Type your description of service here... ' />
+                                     <p className={styles.labelItem}>Description</p>
+                                    <textarea  required className={styles.description_input} onChange={handleChange} type="text" name="description" placeholder='Type your description of service here... ' />
 
                                 </div>
                                 <div className={styles.new_shop_item_buttons}>
                                     <button className={styles.deleteProduct} onClick={close}>
                                         <img src="/items/trashRed.png" alt="delIcon" />    <p>  Cancel</p>
                                     </button>
-                                    <button className={styles.saveProduct} onClick={handleStartUpload}>
+                                    <button type='submit' className={styles.saveProduct} >
                                         Save
                                     </button>
 
@@ -145,6 +141,7 @@ const AddNewItem = React.memo(({ close, activeItem }) => {
                     </div>
                 </Collapse>
             </div>
+                </form>
         </>
     )
 })

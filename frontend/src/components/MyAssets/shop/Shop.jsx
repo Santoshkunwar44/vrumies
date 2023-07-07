@@ -57,8 +57,8 @@ const Shop = () => {
     }
 
     const shopComponentMapping = {
-        services: <ShopServices items={shopItems} />,
-        products: <ShopProducts items={shopItems} />
+        services: <ShopServices type={"services"} items={shopItems} />,
+        products: <ShopProducts type={"products"} items={shopItems} />
     }
     return (
         <div className={styles.shop_wrapper}>

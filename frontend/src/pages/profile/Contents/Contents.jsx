@@ -3,6 +3,15 @@ import { useSelector } from 'react-redux'
 import { ProfileItemList } from '../../../Layouts/profileItemList/ProfileItemList'
 import { getAllContentOfUserApi } from '../../../utils/apis/content/contentApi'
 
+const styles={
+    contentContainer:{
+        display:"flex",
+        flexDirection:"column",
+        gap:"4rem",
+        padding:"2rem"
+    }
+}
+
 const Contents = () => {
 
     const { userData } = useSelector((state) => state.userReducer)
@@ -27,10 +36,10 @@ const Contents = () => {
     }
 
     return (
-        <div>
-            <ProfileItemList name={"My Blogs"} type={"blog"} data={contentData ? contentData.blog : null} />
-            <ProfileItemList name={"My Vlogs"} type={"vlog"} data={contentData ? contentData.vlog : null} />
-            <ProfileItemList name={"My Forums"} type={"forum"} data={contentData ? contentData.forum : null} />
+        <div style={styles.contentContainer}  >
+            <ProfileItemList name={"My Blogs"} type={"blogs"} data={contentData ? contentData.blog : null} img={"/images/blogImg.png"} />
+            <ProfileItemList name={"My Vlogs"} type={"vlogs"} data={contentData ? contentData.vlog : null}  img={"/images/vlogCam.png"}/>
+            <ProfileItemList name={"My Forums"} type={"forums"} data={contentData ? contentData.forum : null}  img={"/images/forumImg.png"}/>
 
         </div>
     )

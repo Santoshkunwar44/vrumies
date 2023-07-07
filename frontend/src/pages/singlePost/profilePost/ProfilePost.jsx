@@ -25,41 +25,43 @@ const ProfilePost = () => {
 
         if (id) {
             fetchPostById()
+            fetchReplyQuoteList()
         }
 
     }, [id])
-console.log("i am inside")
-   const  fetchPostById=()=>{
+   const  fetchPostById=async()=>{
 
-    // fetch(getPostByIdApi,(err,data)=>{
-    //     console.log("the data",data)
-    //     if(err){
-    //         console.log(err)
-    //     }else{
-    //         setPostData(data[0])
-    //     }
-    // })
+
+    try {
+            const {data,status} = await getPostByIdApi(id);
+            console.log(data);
+            setPostData(data.message[0])
+
+    } catch (error) { 
+            console.log(error)
+    }
 
 
 
     }
+    console.log(postData)
 
-    // const fetchReplyQuoteList = async () => {
-
-
-    //     try {
-    //         const { data } = await getReplyByPost(id)
-    //         setReplyQuotes(data.message)
-    //     } catch (error) {
-    //         console.log(error)
-    //     }
+    const fetchReplyQuoteList = async () => {
 
 
+        try {
+            const { data } = await getReplyByPost(id)
+            setReplyQuotes(data.message)
+        } catch (error) {
+            console.log(error)
+        }
 
-    // }
+
+
+    }
     return (
         <>
-            <MetaDecorator image={postData?.postImg[0]} title={postData?.title} description={postData?.desc} />
+            <MetaDecorator image= { postData?.postImg && postData?.postImg[0]} title={postData?.title} description={postData?.desc} />
             <div className={styles.profilePost}>
                 <div className={styles.profilePostTop}>
                     <div className={styles.postHeader}>
@@ -106,10 +108,13 @@ console.log("i am inside")
                         </div>
                     </div>
                     <div className={styles.PostImageSlider}>
-                        <PostImgSlider
-                            items={postData?.postImg}
-                            postImgwidth={width - 25}
-                        />
+                      {
+
+                        postData?.postImg &&  <PostImgSlider
+                          items={postData?.postImg}
+                          postImgwidth={width - 25}
+                          />
+                        } 
 
                     </div>
                     <div className={styles.postHeaderBottom}>

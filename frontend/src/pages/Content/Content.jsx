@@ -9,6 +9,7 @@ import ContentCreateModal from "../../components/modal/ContentCreateModal/Conten
 import Navbar from "../../components/Navbar/Navbar";
 import { getContentByTypeApi } from "../../utils/apis/content/contentApi";
 import styles from "./Content.module.css"
+import NotFound from "../../components/notFound/NotFound";
 
 const Content = () => {
 
@@ -19,10 +20,10 @@ const Content = () => {
     const [contentArr, setContentArr] = useState(null)
     const { refresh } = useSelector((state) => state.otherReducer);
     const navigate = useNavigate()
-    const tab = location.state.tab 
+    const tab = location.state?.tab 
     useEffect(()=>{
         if(tab){
-            setActiveTabList(tab.toLowerCase())
+            setActiveTabList(tab?.toLowerCase())
         }
     },[tab])
     console.log(tab)
@@ -64,7 +65,6 @@ const Content = () => {
             fetchContent(activeList)
         }
     }, [activeList, refresh])
-    console.log("the refresh value ", refresh)
 
     const fetchContent = async (contentType) => {
 
@@ -153,7 +153,7 @@ const ForumContainer = ({ contentArr }) => {
 
     return <>
         {
-            !contentArr ? <div> loading </div> : contentArr?.map((forum) => <ForumItem key={forum?._id} data={forum} />)
+            !contentArr ? <div> loading </div> :  contentArr.length > 0 ? contentArr?.map((forum) => <ForumItem key={forum?._id} data={forum} />) :<NotFound img="/images/forumImg.png" text={"No forums yet !"}/>
         }
 
 
@@ -163,11 +163,11 @@ const ForumContainer = ({ contentArr }) => {
 
 const VlogContainer = ({ contentArr }) => {
 
-
+    console.log("vlog container")
     return <>
 
         {
-            !contentArr ? <div> loading </div> : contentArr?.map((forum) => <VlogItem key={forum?._id} data={forum} />)
+            !contentArr ? <div> loading </div> : contentArr.length > 0 ? contentArr?.map((forum) => <VlogItem key={forum?._id} data={forum} />):<NotFound img="/images/vlogCam.png" text={"No vlogs yet !"}/>
         }
 
 
@@ -180,7 +180,7 @@ const BlogContainer = ({ contentArr }) => {
     return <>
 
         {
-            !contentArr ? <div> loading </div> : contentArr?.map((forum) => <BlogItem key={forum?._id} data={forum} />)
+            !contentArr ? <div> loading </div> : contentArr.length > 0 ? contentArr?.map((forum) => <BlogItem key={forum?._id} data={forum} />) : <NotFound img="/images/blogImg.png" text={"No blogs yet !"}/>
         }
 
     </>

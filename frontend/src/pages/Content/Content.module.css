@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+
 }
 .tab_list {
   display: flex;
@@ -66,6 +67,7 @@
   display: flex;
   gap: 2rem;
   flex-direction: column;
+  min-height: 465px;
 }
 .back_text {
   cursor: pointer;

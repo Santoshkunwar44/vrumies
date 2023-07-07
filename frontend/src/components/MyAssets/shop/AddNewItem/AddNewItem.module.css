@@ -26,6 +26,7 @@
 .shop_sub_item p {
   letter-spacing: 1px;
   font-weight: bold;
+  
 }
 .shop_sub_item p:nth-of-type(1) {
   color: #37e710;
@@ -36,11 +37,11 @@
   background-color: transparent;
   letter-spacing: 1px;
   color: grey;
-  font-size: 11px;
+  font-size: 14px;
 }
 .shop_sub_item input::placeholder {
   color: grey;
-  font-size: 11px;
+  font-size: 14px;
 }
 .new_shop_item_details {
   width: 100%;
@@ -140,4 +141,22 @@
   align-items: center;
   gap: 1rem;
   border: 2px solid red;
+}
+.labelItem{
+  font-size: 18px !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.description_input{
+  background-color: transparent;
+
+  width: 100%;
+  border: none;
+  outline: none;
+  color: gray;
+
+}
+.description_input::placeholder{
+  letter-spacing: 1px;
+  font-size: 14px;
 }

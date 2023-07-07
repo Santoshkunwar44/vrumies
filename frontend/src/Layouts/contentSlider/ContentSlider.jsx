@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ContentCard from "../Content/ContentCard/ContentCard";
 import "./ContentSlider.css"
-const ContentSlider = ({ data }) => {
+import NotFound from "../../components/notFound/NotFound";
+const ContentSlider = ({ data ,img,type}) => {
     const settings = {
         dots: true,
         infinite: false,
@@ -18,7 +19,9 @@ const ContentSlider = ({ data }) => {
         <>
             <Slider {...settings}>
                 {
-                    data?.map((item) => <ContentCard key={item?._id} content={item} />)
+                data?.length ?   
+                 data?.map((item) => <ContentCard key={item?._id} content={item} />) :
+                 <NotFound img={img} text={"Not found"} type={type}/>
                 }
             </Slider>
         </>

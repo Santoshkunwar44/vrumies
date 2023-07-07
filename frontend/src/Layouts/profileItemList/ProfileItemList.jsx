@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import ContentCard from '../Content/ContentCard/ContentCard'
 import ContentSlider from '../contentSlider/ContentSlider'
 import styles from "./ProfileItemList.module.css"
-export const ProfileItemList = ({ name, type, data }) => {
+export const ProfileItemList = ({ name, type, data ,img}) => {
 
     return (
         <div  >
@@ -20,7 +20,7 @@ export const ProfileItemList = ({ name, type, data }) => {
                         ))
                     } */}
 
-                    <ContentSlider data={data} />
+                    <ContentSlider type={type} data={data} img={img}/>
                 </div>
 
 

@@ -6,7 +6,7 @@ import Post from "../post/Post";
 import ReplyQuotes from "../replyQuotes/ReplyQuotes";
 import styles from "./itemSlider.module.css"
 
-const ItemSlider = ({ items, type, isLoading, sliderWidth }) => {
+const ItemSlider = ({ items, type, isLoading, sliderWidth ,imagePath }) => {
     console.log('the width *****', sliderWidth)
 
     const settings = {
@@ -102,7 +102,7 @@ const ItemSlider = ({ items, type, isLoading, sliderWidth }) => {
                     }
 
                     {
-                        items?.length <= 0 && <NotFound img="/items/post.png" text={"No post yet !!"} />
+                        items?.length <= 0 && <NotFound img={`/images/${imagePath}.png`} text={"No post yet !!"} />
                     }
 
                 </Slider>
