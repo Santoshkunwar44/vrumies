@@ -8,6 +8,7 @@ import DisputeModal from "../modal/disputePopover/DisputePopover"
 import { useRef } from "react"
 import BuyTransaction from "./BuyTransaction/BuyTransaction"
 import SellTransaction from "./sellTransaction/SellTransaction"
+import NotFound from "../notFound/NotFound"
 
 
 
@@ -132,26 +133,30 @@ const Transactions = ({ transactionId }) => {
                         </thead>
                         <tbody>
                             {
-                                viewAs === "buyer" && buyerTransactionList?.map((item) => <BuyTransaction
+                                viewAs === "buyer" ? buyerTransactionList?.map((item) => <BuyTransaction
                                     item={item}
                                     orderRef={orderRef}
                                     viewAs={viewAs}
                                     setStartDisputePopover={setStartDisputePopover}
                                     startDisputePopover={startDisputePopover}
                                     transactionId={transactionId}
-                                />)
+                                />) :""
                             }
                             {
-                                viewAs === "seller" && sellerTransactionList?.map((item) => <SellTransaction
+                                viewAs === "seller" ? sellerTransactionList?.map((item) => <SellTransaction
                                     startDisputePopover={startDisputePopover}
                                     setStartDisputePopover={setStartDisputePopover}
                                     item={item}
                                     viewAs={viewAs}
 
-                                />)
+                                />):""
                             }
                         </tbody>
+
                     </table>
+                    {
+                        (viewAs === "buyer" && buyerTransactionList.length ===0) ?<NotFound img="/images/paymentImg.png" text={"No Buying Transactions"}/>: (viewAs==="seller" && sellerTransactionList.length ===0)&&<NotFound img="/images/paymentImg.png" text={"No Buying Transactions"}/>
+                    }
 
                 </div>
             </div>

@@ -79,7 +79,7 @@ const Mypost = ({ itemWidth }) => {
                     </div>
                 </div>
                 <div className={styles.postItemWrapper}>
-                    <ItemSlider sliderWidth={itemWidth} isLoading={loading?.isLoading && loading.path === "profilePost"} type={"post"} items={myPostRequestList} />
+                    <ItemSlider sliderWidth={itemWidth} isLoading={loading?.isLoading && loading.path === "profilePost"} type={"post"} imagePath={"reqImg"} items={myPostRequestList} />
                 </div>
             </div>
             <div className={styles.myPostItem}>
