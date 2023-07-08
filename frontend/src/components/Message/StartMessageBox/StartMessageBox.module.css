@@ -14,13 +14,14 @@
   align-items: center;
   gap: 1rem;
   position: absolute;
-  top: 30%;
+  top: 10%;
   width: 100%;
   text-align: center;
   margin: auto;
 }
 .initial_text {
-  color: rgba(128, 128, 128, 0.685);
+  /* color: rgba(128, 128, 128, 0.685); */
+   color: rgba(128, 128, 128, 0.945);
   letter-spacing: 1px;
   font-size: 11px;
 }

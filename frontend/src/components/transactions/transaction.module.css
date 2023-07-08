@@ -9,6 +9,7 @@
 }
 .transactionHeader h2 {
   color: #37e710;
+
 }
 .transactionHeaderLine {
   height: 2px;
@@ -81,6 +82,8 @@ th {
 }
 .editDirectDeposit {
   width: fit-content;
+  height: 40px;
+  border-radius: 3px;
   padding: 0 20px;
   background-color: #37e710;
 }

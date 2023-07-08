@@ -5,7 +5,7 @@ const NoChatsYet = () => {
             <div className={styles.noChat_img_box}>
 
 
-                <img className={styles.noChatImg} src="/images/no_msg.png" alt="nochatImg" />
+                <img className={styles.noChatImg} src="/images/myChatsImg.png" alt="nochatImg" />
                 <p className={styles.no_chat_text}>No chats with buyers / sellers !!</p>
 
 

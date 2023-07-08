@@ -16,7 +16,7 @@ const StartMessageBox = () => {
     return (
         <div className={styles.start_message_box} >
             <div className={styles.start_message_content}>
-                <img className={styles.start_chat_img} src="/images/start_chat.png" alt="startChatImg" />
+                <img className={styles.start_chat_img} src="/images/chatImg.png" alt="startChatImg" />
                 <p className={styles.initial_text}>Start chatting with sellers & buyers</p>
                 {/* <button className={styles.search_friend_btn} onClick={handleInputFocus}>Search Friends</button> */}
             </div>

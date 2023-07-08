@@ -20,7 +20,8 @@ const AppCategory = () => {
         subcategory: "",
         type: "Advertise",
     })
-    const [thePosts, setTheposts] = useState([])
+        const [thePosts, setTheposts] = useState([])
+
     const [theFilterdPost, setTheFilteredPost] = useState([])
     // const catData = useLocation().state.data
     const {id} = useParams()
@@ -36,6 +37,7 @@ const AppCategory = () => {
             fetchCategoryById(id )
         }
     }, [id])
+    
 
 
 
@@ -49,25 +51,24 @@ const AppCategory = () => {
     }, [postFilter, thePosts])
 
 
-    useEffect(() => {
-
-        postWrapperRef.current.scrollIntoView({ behavior: "smooth" })
-    }, [theFilterdPost, locationFilterPostItem])
-
 
     useEffect(() => {
-
+        
         if (currentCatData?.subCategory) {
-
+            
             setPostFilters({
                 type: "Advertise",
                 subcategory: currentCatData?.subCategory[0]
             })
         }
-
+        
     }, [currentCatData])
-
-
+    
+    
+    const handleScroll=()=>{
+        
+        postWrapperRef.current.scrollIntoView({ behavior: "smooth" })
+    }
 
 
     const fetchThePosts = async (catId) => {
@@ -120,16 +121,16 @@ console.log(thePosts)
 
                                 <div className={styles.catBannerBtnWrapperBox}>
                                     <div className={styles.catBannerBtnWrapper}>
-                                        <button onClick={() => setPostFilters((prev) => {
+                                        <button onClick={() => {setPostFilters((prev) => {
                                             return {
                                                 ...prev, type: "Advertise"
                                             }
-                                        })} className={`${styles.catBtnOption} ${postFilter.type === "Advertise" ? styles.activeCatOption : ""}  `}> <span>Advertise</span></button>
-                                        <button onClick={() => setPostFilters((prev) => {
+                                        });handleScroll() }} className={`${styles.catBtnOption} ${postFilter.type === "Advertise" ? styles.activeCatOption : ""}  `}> <span>Advertise</span></button>
+                                        <button onClick={() => {setPostFilters((prev) => {
                                             return {
                                                 ...prev, type: "Request"
                                             }
-                                        })} className={`${styles.catBtnOption} ${postFilter.type === "Request" ? styles.activeCatOption : ""}  `}> <span>Request</span></button>
+                                        }) ;handleScroll() }} className={`${styles.catBtnOption} ${postFilter.type === "Request" ? styles.activeCatOption : ""}  `}> <span>Request</span></button>
 
                                     </div>
                                     <div className={styles.catBannerBtnWrapper}>
