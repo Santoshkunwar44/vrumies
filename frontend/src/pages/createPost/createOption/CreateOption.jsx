@@ -53,13 +53,13 @@ const CreateOption = ({ handleDelete, handleChangeAdditionalInformation, setCrea
                     <div className={styles.priceSettingItem}>
                         <label className={styles.label} > Price Setting:</label>
                         <div className={styles.priceSettingBox}>
-                            <input onChange={onChangeInput} name="price" type="text" placeholder="Set price...    " />
+                            <input required onChange={onChangeInput} name="price" type="text" value={createPostData.price} placeholder="Set price...    " />
                         </div>
                     </div>
                     <div className={styles.websiteUrlItem}>
                         <label className={styles.label} > Website Url:</label>
                         <div className={styles.websiteUrlBox}>
-                            <input onChange={onChangeInput} name="websiteLink" type="text" placeholder="website url...    " />
+                            <input required onChange={onChangeInput} value={createPostData.websiteLink} name="websiteLink" type="text" placeholder="website url...    " />
                         </div>
                     </div>
                 </div>

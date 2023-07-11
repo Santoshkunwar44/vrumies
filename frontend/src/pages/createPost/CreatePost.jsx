@@ -66,8 +66,7 @@ const CreatePost = () => {
     }, [userData])
 
 
-    console.log(currentSelectedCategory)
-
+ 
 
 
 
@@ -104,8 +103,7 @@ const CreatePost = () => {
         
         const theSubCats = categoryList.find((cat) => cat._id === createPostData.category)
         setSubCategory(theSubCats?.subCategory)
-        console.log("category chaning")
-        setCurrentSelectedCategory(theSubCats)
+         setCurrentSelectedCategory(theSubCats)
       
 
             setCreatePostData((prev) => {
@@ -251,6 +249,8 @@ const CreatePost = () => {
             }))
             return;
         }
+     
+      
         setStartUpload(true)
     }
     console.log(currentSelectedCategory)

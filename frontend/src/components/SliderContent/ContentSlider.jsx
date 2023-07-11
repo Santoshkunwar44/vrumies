@@ -2,11 +2,11 @@ import React from 'react'
 import styles from "../../pages/home/home.module.css"
 import HomeCategory from '../HomeCategory/HomeCategory'
 
-const ContentSlider = ({fullWidth}) => {
+const ContentSlider = ({fullWidth,type}) => {
   return (
 <>
     <div style={{marginBottom:"3rem"}}>
-   <HomeCategory fullWidth={fullWidth} title={"Explore Content  Categories"} type={"content"} />
+   <HomeCategory  fullWidth={fullWidth} title={"Explore Content  Categories"} type={"content"} />
                         <div className={styles.home_bottom}>
 
                             <p className={styles.see_all}>See All</p>

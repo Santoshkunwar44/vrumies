@@ -35,7 +35,7 @@ const Home = () => {
                     <div ref={catBoxRef} className={styles.homeLeft}>
                         <BannerContainer />
                     <PostSlider fullWidth={categorySideWidth}/>
-                    <ContentSlider  fullWidth={categorySideWidth}/>
+                    <ContentSlider type="content" fullWidth={categorySideWidth}/>
                     </div>
 
                     <CalenderLayout />

@@ -73,7 +73,11 @@
 .currentLink {
   pointer-events: initial !important;
 }
-
+.content_Box{
+  width: 30% !important ;
+  margin:auto;
+  scale:1 !important; 
+}
 @media screen and (max-width: 480px) {
   .categoryItem {
     scale: 0.4;

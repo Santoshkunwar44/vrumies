@@ -43,8 +43,8 @@ const Catslider = ({ fullWidth ,type}) => {
         responsive: [
             { breakpoint: 350, settings: { slidesToShow: 1 } },
             { breakpoint: 600, settings: { slidesToShow: 1 } },
-            { breakpoint: 1200, settings: { slidesToShow: 3 } },
-            { breakpoint: 2000, settings: { slidesToShow: 3 } },
+            { breakpoint: 1200, settings: { slidesToShow:type==="content"?1: 3 } },
+            { breakpoint: 2000, settings: { slidesToShow: type==="content"? 1:3 } },
 
         ]
     };
@@ -74,7 +74,7 @@ const Catslider = ({ fullWidth ,type}) => {
 
 
     const catSkeletionsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-    console.log(slideIndex)
+    // console.log(slideIndex)
 
     return (
         <>
@@ -86,7 +86,7 @@ const Catslider = ({ fullWidth ,type}) => {
                     }
                     {
                         appCategoryList.map((item, index) => (
-                            <CatItem key={index} catItem={item} currentFocus={slideIndex === index} />
+                            <CatItem type={type} key={index} catItem={item} currentFocus={slideIndex === index} />
                         ))
                     }
                 </Slider>
