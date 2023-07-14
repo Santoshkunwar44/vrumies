@@ -260,7 +260,7 @@ const Profile = () => {
                                 <img src="/icons/vehicle.png" alt="contentIcons" />
                                 <p>My Vehicle</p>
                             </div>
-                       <div onClick={() => navigate("reviews")} className={`${styles.profileTopItem} ${currentInspect === "vehicle" ? styles.activeProfileTopItem : ""} `}>
+                       <div onClick={() => navigate("reviews")} className={`${styles.profileTopItem} ${currentInspect === "reviews" ? styles.activeProfileTopItem : ""} `}>
 
                                 <img src="/images/star.png" alt="contentIcons" />
                                 <p>My Reviews</p>

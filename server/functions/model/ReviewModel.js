@@ -14,7 +14,9 @@ const ReviewSchema=mongoose.Schema({
             ref:"User"
         },
         rating:{
-            type:Number
+            type:Number,
+            min:[0,'rating cannot be less thatn 0 '],
+            max:[10,'Rating cannot be more thatn 10 s ']
         }
 
 },{timestamps:true})

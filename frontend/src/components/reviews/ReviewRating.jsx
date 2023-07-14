@@ -2,17 +2,19 @@ import * as React from 'react';
 
 import Rating from '@mui/material/Rating';
 
-const ReviewRating = () => {
-      const [value, setValue] = React.useState(4);
+const ReviewRating = ({rating,handleChange}) => {
+      // const [value, setValue] = React.useState(rating);
   return (
     <div>
            <Rating
         // disabled
         name="simple-controlled"
-        value={value}
+        value={rating}
         max={10}
         onChange={(event, newValue) => {
-          setValue(newValue);
+          // setValue(newValue);
+          handleChange("rating",newValue)
+
         }}
       />
     </div>

@@ -12,4 +12,5 @@ module.exports = function RoutessInit(app) {
     app.use("/api/content", require("./routes/ContentRoute"))
     app.use("/api/shop", require("./routes/shopRoute"))
     app.use("/api/note", require("./routes/NoteRoute"))
+    app.use("/api/review",require("./routes/ReviewRoute"))
 }

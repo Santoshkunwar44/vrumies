@@ -18,11 +18,11 @@ class ReviewController{
             try {
                 if( !owner) throw "field missing";
 
-                const reviews = await ReviewModel.find({owner}).populate(["user","owner"])
+                const reviews = await ReviewModel.find({owner}).populate(["user","owner"]).sort({createdAt:-1})
                 res.status(200).json({message:reviews,success:true})
 
         } catch (error) {
-                res.status(500).json({message:error.message,success:false})            
+                    res.status(500).json({message:error.message,success:false})            
         }
 
     }
