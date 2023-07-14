@@ -11,6 +11,8 @@ router.get('/google/callback',
         const { accessToken, refreshToken } = await TokenService.createToken({
             _id: others._id
         })
+
+        
         TokenService.storeRefreshToken(refreshToken, others._id)
         res.cookie("accessToken", accessToken, {
             maxAge: 1000 * 60 * 60 * 24 * 30 * 12 * 2,
@@ -24,7 +26,9 @@ router.get('/google/callback',
             httpOnly: true,
             sameSite: "None"
         })
-        res.redirect(`${process.env.FRONTEND_URL}/`);
+        const fronteEndUrl  = process.env.NODE_ENV === "production" ?`${process.env.FRONTEND_URL}` : `${process.env.FRONTEND_URL_DEV}/`
+        res.redirect(fronteEndUrl);
+
     });
 
 module.exports = router

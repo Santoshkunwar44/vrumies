@@ -4,6 +4,7 @@ import { useSelector } from "react-redux"
 import { useLocation } from "react-router-dom"
 import LogoutPop from "../modal/logoutPop/LogoutPop"
 import { useEffect, useState } from "react"
+import NavPopover from "../../Layouts/popover/NavMenu"
 
 
 const Navbar = () => {
@@ -38,7 +39,7 @@ const Navbar = () => {
                 {
 
                     userData ?
-                        <LogoutPop>
+                        <NavPopover>
                             <div className={styles.navProfileBox}>
                                 <img referrerPolicy="no-referrer" className={styles.navProfileImg} src={userData?.profileImg} alt="profilePicture" />
                                 <div className={styles.navPofileBoxInfo}>
@@ -47,7 +48,7 @@ const Navbar = () => {
                                 </div>
 
                             </div>
-                        </LogoutPop> : <button onClick={() => navigate("/signup")} className={styles.signUpBtn}> <img src="/items/person.png" alt="personImg" /> SIGN UP</button>
+                        </NavPopover> : <button onClick={() => navigate("/signup")} className={styles.signUpBtn}> <img src="/items/person.png" alt="personImg" /> SIGN UP</button>
                 }
             </div>
         </div>

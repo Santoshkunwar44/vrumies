@@ -5,6 +5,9 @@
   text-decoration: none;
   font-family: "poppins";
 }
+:root{
+  --primary_color:#37e710;
+}
 ::-webkit-scrollbar{
   width: 5px;
 }
@@ -58,6 +61,12 @@ a {
 .chakra-modal__content-container {
   z-index: 1111 !important;
 }
+.css-6hp17o-MuiList-root-MuiMenu-list{
+  padding:  0 !important;
+}
+.MuiRating-iconFilled{
+  color: #37e710 !important;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -71,6 +80,10 @@ a {
 .slick-slider {
   width: 100% !important;
 }
+.css-1c99szj-MuiRating-icon {
+    color: gray !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

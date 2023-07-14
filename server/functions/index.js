@@ -37,27 +37,6 @@ app.set("trust proxy", 1)
 
 
 
-// app.get('/profile/:userId/post/:postId', function (req, res) {
-
-//     const filePath = path.resolve(__dirname, "./build", "index.html")
-
-//     fs.readFile(filePath, "utf-8", (err, data) => {
-//         if (err) {
-//             res.send('error')
-//             return console.log(err)
-//         }
-//         data = data
-//             .replace(/__TITLE__/g, "I am selling the flower")
-//             .replace(/__DESCRIPTION__/g, "I am selling the flower")
-//             .replace(/__IMAGE__/g, "https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png")
-//             .replace(/__WEBSITEURL__/g, process.env.SITE_URL)
-//             .replace(/__THEDESCRIPTION__/g, "i am selling the flower anybody interested to buy  ?")
-//         res.send(data)
-//     })
-
-// })
-
-
 app.use(cookieParser())
 app.use(express.json())
 app.use(morgan("common"))
@@ -85,7 +64,7 @@ app.use(session({
         secure:process.env.NODE_ENV === "production",
         maxAge: 31556952000,
         httpOnly: true,
-        sameSite:"none"
+    
     },
 }))
 

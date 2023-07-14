@@ -26,6 +26,7 @@ import MessageBox from './Layouts/MessageBox/MessageBox';
 import Content from './pages/Content/Content';
 import Vehicles from './components/MyAssets/Vehicles/Vehicles';
 import Shop from './components/MyAssets/shop/Shop';
+import Reviews from './pages/profile/Reviews/Reviews';
 
 function App() {
 
@@ -113,6 +114,7 @@ function App() {
           <Route path='content' element={<Contents />} />
           <Route path='shop' element={<Shop />} />
           <Route path='vehicle' element={<Vehicles />} />
+          <Route path='reviews' element={<Reviews/>}/>
         </Route>
         <Route path='/category/:id' element={<AppCategory />} />
         <Route path="/signup" element={<Signup />} />

@@ -240,11 +240,11 @@ const Profile = () => {
                                 <p>My posts</p>
                             </div>
 
-                            <div onClick={() => navigate("transactions")} className={`${styles.profileTopItem} ${currentInspect === "transactions" ? styles.activeProfileTopItem : ""} `}>
+                            {/* <div onClick={() => navigate("transactions")} className={`${styles.profileTopItem} ${currentInspect === "transactions" ? styles.activeProfileTopItem : ""} `}>
 
                                 <img src="/profile/transaction.png" alt="loctionImage" />
                                 <p>My Transaction</p>
-                            </div>
+                            </div> */}
                             <div onClick={() => navigate("content")} className={`${styles.profileTopItem} ${currentInspect === "content" ? styles.activeProfileTopItem : ""} `}>
 
                                 <img src="/icons/content.png" alt="contentIcons" />
@@ -260,6 +260,11 @@ const Profile = () => {
                                 <img src="/icons/vehicle.png" alt="contentIcons" />
                                 <p>My Vehicle</p>
                             </div>
+                       <div onClick={() => navigate("reviews")} className={`${styles.profileTopItem} ${currentInspect === "vehicle" ? styles.activeProfileTopItem : ""} `}>
+
+                                <img src="/images/star.png" alt="contentIcons" />
+                                <p>My Reviews</p>
+                            </div>                            
                         </div>
                     </div>
                     <div ref={postReplyQuotes} className={styles.profileRightBottom}>

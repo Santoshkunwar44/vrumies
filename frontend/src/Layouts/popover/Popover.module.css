@@ -1,0 +1,19 @@
+.menuNav{
+    background-color: #151515 !important;
+}
+.menuItem{
+    background-color: #383838 !important;
+    color: white !important;
+    width: 156px;
+    font-size: 14px;
+    /* color: gray; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding:  10px;
+    letter-spacing: 1px;
+    height: 50px;
+}
+.menuItem svg{
+    font-size: 1.2rem;
+}
