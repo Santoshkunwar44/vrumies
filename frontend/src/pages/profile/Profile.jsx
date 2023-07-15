@@ -9,6 +9,7 @@ import UploadImageProgress from '../../components/uploadImage/UploadImageProgres
 import { useDispatch, useSelector } from 'react-redux'
 import { setToastifyInfo, startRefresh } from '../../redux/actions/otherAction'
 import { useLocation } from 'react-router-dom'
+import ProfileSidebar from '../../components/profile/ProfileSidebar'
 
 const Profile = () => {
 
@@ -186,51 +187,8 @@ const Profile = () => {
             <Navbar />
             {uploadImageStart ? <UploadImageProgress uploadImages={[...profileFile]} uploadData={userObjData} setCompleted={() => { setUploadImageStart(false); setUploadImageCompleted(true) }} updateMethod={true} urlPath={`/user/${userId}`} /> : ""}
             <div className={styles.profileWrapper}>
-                <div className={styles.profileInfoLeft}>
-                    <img className={styles.profileMark} src="/images/profilemark.png" alt="profileMark" />
-                    <div className={styles.profileMainInfo}>
-                        <div onClick={() => imageRef.current.click()} className={styles.imageWrapper}>
-                            <img referrerPolicy="no-referrer" className={styles.profileImage} src={currentUser?.profileImg} alt="profileImage" />
-                            <div className={styles.imageBg}>
-                                <img className={styles.cameraImg} src="/images/profileCamera.png" alt="profileCamera" />
-                                <input multiple style={{ display: "none" }} onChange={(e) => setProfileFile([e.target.files[0]])} type="file" name="profileImg" id="" ref={imageRef} />
-
-                            </div>
-                        </div>
-
-                        <div className={styles.profileNameInfo}>
-
-
-                            <p ref={nameRef} contentEditable={nameEdit} className={styles.profileUsername}> {currentUser?.username} </p>
-                            <p className={styles.profileEmail}>{currentUser?.email}</p>
-
-                        </div>
-
-                        {
-                            nameEdit ? <img alt='doneImg' className={styles.pencilEdit} onClick={() => handleUpdateUser()} src="https://img.icons8.com/emoji/48/null/check-mark-emoji.png" /> : <img onClick={() => setNameEdit(true)} className={styles.pencilEdit} src="/images/pencil.png" alt="pencilEdit" />
-                        }
-
-                    </div>
-                    <div className={styles.profileUserDescription}>
-                        <div className={styles.profileDescHeader}>
-
-                            <p className={styles.aboutText}>About Me</p>
-                            {
-                                editMode ? <p onClick={() => handleUpdateUser()} className={styles.editText}>Save</p> :
-                                    <p onClick={() => setEditMode(true)} className={styles.editText}>Edit</p>
-
-                            }
-                        </div>
-
-                        <div className={styles.profileAboutText}>
-                            {
-                                currentUser?.about ? editMode ? <div contentEditable ref={editableDivRef} > {currentUser?.about} </div> : currentUser?.about : editMode ? <textarea ref={newInputRef} rows={"10"} className={styles.editInput} placeholder='start typing...' ></textarea> : <span className={styles.typeText}>Type about  yourself here...</span>
-                            }
-                        </div>
-
-                    </div>
-
-                </div>
+               <ProfileSidebar currentUser={currentUser} setEditMode={setEditMode} setNameEdit={setNameEdit} newInputRef={newInputRef} editableDivRef={editableDivRef}  nameRef={nameRef} nameEdit={nameEdit} editMode={editMode} setProfileFile={setProfileFile} handleUpdateUser={handleUpdateUser}/> 
+              
                 <div className={styles.profileRight}>
                     <div className={styles.profileRightTop}>
                         <div className={styles.profileRightTopIitems}>

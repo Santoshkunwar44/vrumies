@@ -18,28 +18,31 @@ const Chat = () => {
 
 
     useEffect(() => {
-        socketRef.current = io("https://lets-chat-rt5f.onrender.com")
+        socketRef.current = io(process.env.REACT_APP_SOCKET_URL)
         dispatch(setSocketRef(socketRef.current))
 
         return () => {
-            socketRef.current.emit("leave", userData?._id)
+            socketRef.current.emit("LEAVE", userData?._id)
         }
     }, [])
 
+    // console.log(o )
 
     useEffect(() => {
         if (!userData?._id) return
-        socketRef.current.emit("join", userData?._id)
-        socketRef.current.on("get_online_users", (onlineUsers) => {
+        socketRef.current.emit("JOIN", userData?._id)
+        socketRef.current.on("GET_USERS", (onlineUsers) => {
+            // console.log("online users",onlineUsers)
             dispatch(setActiveUsers(onlineUsers))
         })
     }, [userData])
 
     useEffect(() => {
-        socketRef.current.on("get_message", (message) => {
-            let data = { ...message }
+        socketRef.current.on("GET_MESSAGE", (data) => {
+            console.log("incoming message",data)
+            const {message} = data;
             delete data.sender_id;
-            delete data.receiver_id;
+            // delete data.receiver_id;
             dispatch({ type: "ADD_NEW_CHAT_MESSAGE", data: message })
             dispatch({ type: "START_REFRESH" })
 

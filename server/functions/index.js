@@ -2,7 +2,6 @@
 
 
 
-
 require('dotenv').config({});
 
 const functions      = require("firebase-functions")
@@ -16,6 +15,21 @@ const morgan = require("morgan")
 const passport = require("passport")
 const path = require("path")
 const fs = require("fs")
+const http = require("http")
+const server = http.createServer(app)
+const { Server } = require("socket.io");
+const io = new Server(server, {
+  cors: {
+    origin: [
+      process.env.FRONTEND_URL,
+      "http://localhost:3000",
+      "http://127.0.0.1:3000",
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
+  },
+});
+
 console.log(process.env.NODE_ENV ==="production")
 
 
@@ -64,6 +78,7 @@ app.use(session({
         secure:process.env.NODE_ENV === "production",
         maxAge: 31556952000,
         httpOnly: true,
+        sameSite:"none"
     
     },
 }))
@@ -73,7 +88,9 @@ app.use(passport.session())
 
 
 require("./AllRoutes")(app)
+require("./utils/socket")(io)
 
 
-app.listen(8000, () => console.log("server started at port 8000"))
+
+server.listen(8000, () => console.log("server started at port 8000"))
 exports.app  = functions.https.onRequest(app)

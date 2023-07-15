@@ -13,7 +13,7 @@ export const setActiveUsers = (activeUsers) => (dispatch) => {
 
 export const setActiveChat = (activeChat, userId) => (dispatch) => {
     const activeUser = getNextUser(userId, activeChat?.users);
-    console.log("setting up the active user ", activeUser, userId, activeChat?.users)
+    // console.log("setting up the active user ", activeUser, userId, activeChat?.users)
     dispatch({ type: "SET_ACTIVE_CHAT", data: activeChat })
     dispatch({ type: "SET_ACTIVE_USER", data: activeUser })
 }

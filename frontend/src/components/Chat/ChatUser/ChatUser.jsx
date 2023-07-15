@@ -11,6 +11,7 @@ const ChatUser = ({ chat }) => {
     const [selectedChat, setSelectedChat] = useState(false)
     const [isOnline, setIsOnline] = useState(false)
 
+    console.log("watch online users",onlineUsers)
 
     useEffect(() => {
         setSelectedChat(chat?._id === activeChat?._id)

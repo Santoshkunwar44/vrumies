@@ -45,7 +45,7 @@ const MessageInput = () => {
     }
 
     const handleAddMessageAfterAction = (newMessage) => {
-        socketRef.emit("start_message", { ...newMessage, receiver_id: activeUser?._id, sender_id: userData?._id })
+        socketRef.emit("SEND_MESSAGE", {message:newMessage, receiver_id: activeUser?._id, sender_id: userData?._id })
         setInputRef('')
         setIsSent(false)
     }

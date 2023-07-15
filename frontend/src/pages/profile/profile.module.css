@@ -376,7 +376,21 @@
 
   color: #000000;
 }
+.messageUserBox{
+  cursor: pointer;
+  display:flex ;
+  align-items:center ;
+  gap: 10px;
+  height: 40px;
 
+  padding: 1rem ;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 2px solid var(--primary_color);
+}
+.messageUserBox img{
+  width: 30px;
+}
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .locationOptionItem img {
     width: 91px;
@@ -964,3 +978,4 @@
     height: 100px;
   }
 }
+
