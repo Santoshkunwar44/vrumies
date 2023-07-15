@@ -18,7 +18,7 @@ const Chat = () => {
 
     useEffect(() => {
 
-        socketRef.current = io(process.env.REACT_APP_SOCKET_URL)
+        socketRef.current = io("https://us-central1-vrumies-santos-5af3d.cloudfunctions.net/app")
         dispatch(setSocketRef(socketRef.current))
 
         return () => {

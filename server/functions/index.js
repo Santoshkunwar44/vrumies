@@ -18,21 +18,6 @@ const fs = require("fs")
 const http = require("http")
 const server = http.createServer(app)
 const { Server } = require("socket.io");
-const io = new Server(server, {
-  cors: {
-    origin: [
-      process.env.FRONTEND_URL,
-      "https://vrumies.org",
-      "http://localhost:3000",
-      "http://127.0.0.1:3000",
-    ],
-    methods: ["GET", "POST"],
-    credentials: true,
-  },
-});
-
-// console.log(process.env.NODE_ENV ==="production")
-
 
 app.set("trust proxy", 1)
 app.use(cors({
@@ -49,6 +34,21 @@ app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Headers', 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept');
     next();
 });
+
+const io = new Server(server, {
+  cors: {
+    origin: [
+      process.env.FRONTEND_URL,
+      "https://vrumies.org",
+      "http://localhost:3000",
+      "http://127.0.0.1:3000",
+    ],  
+    methods: ["POST,PUT,GET,DELETE,PUT,OPTIONS"],
+    credentials: true,
+  },  
+});  
+
+// console.log(process.env.NODE_ENV ==="production")
 
 
 
