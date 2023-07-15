@@ -1,4 +1,3 @@
-
 import { Outlet, useParams } from "react-router-dom"
 import styles from "./Chat.module.css"
 import { io } from "socket.io-client"
@@ -15,9 +14,10 @@ const Chat = () => {
     const { userData } = useSelector((state) => state.userReducer)
     const dispatch = useDispatch()
     const params = useParams()
-
+    console.log("watch url ",process.env.REACT_APP_SOCKET_URL)
 
     useEffect(() => {
+
         socketRef.current = io(process.env.REACT_APP_SOCKET_URL)
         dispatch(setSocketRef(socketRef.current))
 
