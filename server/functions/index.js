@@ -21,10 +21,7 @@ const { Server } = require("socket.io");
 
 app.set("trust proxy", 1)
 app.use(cors({
-  origin: [
-        process.env.FRONTEND_URL,
-        'http://localhost:3000'
-    ],
+  origin:true,
     methods: ["POST,PUT,GET,DELETE,PUT,OPTIONS"],
     credentials: true
 }))
@@ -37,12 +34,7 @@ app.use(function (req, res, next) {
 
 const io = new Server(server, {
   cors: {
-    origin: [
-      process.env.FRONTEND_URL,
-      "https://vrumies.org",
-      "http://localhost:3000",
-      "http://127.0.0.1:3000",
-    ],  
+    origin: true,
     methods: ["POST,PUT,GET,DELETE,PUT,OPTIONS"],
     credentials: true,
   },  

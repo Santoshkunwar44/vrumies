@@ -27,6 +27,7 @@ import Content from './pages/Content/Content';
 import Vehicles from './components/MyAssets/Vehicles/Vehicles';
 import Shop from './components/MyAssets/shop/Shop';
 import Reviews from './pages/profile/Reviews/Reviews';
+import Setting from './pages/setting/Setting';
 
 function App() {
 
@@ -97,8 +98,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route  path="/setting" element={<Setting/>}/>
         <Route path="/content" element={<Content />} >
-
 
         </Route>
         <Route path='/chat' element={<Chat />} >

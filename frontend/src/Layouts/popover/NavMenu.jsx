@@ -9,10 +9,13 @@ import { useDispatch } from 'react-redux';
 import { logoutApi } from '../../utils/apis/user/userApi';
 import { logoutUser } from '../../redux/actions/userAction';
 import { setToastifyInfo } from '../../redux/actions/otherAction';
+import {  useNavigate } from 'react-router-dom';
 export default function NavMenu({children}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const disptach = useDispatch()
   const open = Boolean(anchorEl);
+  const navigate = useNavigate()
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -72,7 +75,8 @@ transformOrigin={{
         className={styles.menuItem}
             style={{background:"red"}}
         //   className={styles.menuNav}
-        onClick={handleClose}>
+        onClick={()=>navigate("/setting")}
+        >
           <FiSettings/>
           <p>SETTING</p>
         </MenuItem>
