@@ -206,3 +206,98 @@
     width: 90%;
     margin: auto;
 }
+.block_input{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+.block_input input{
+    height: 40px;
+    background-color: white;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+
+    padding: 0 1rem;
+    border: none;
+}
+
+.block_input button{
+    border-radius: 20px;
+    background-color: red;
+    height: 35px;
+    padding: 0 1rem;
+    color: white;
+    letter-spacing: 1px;
+}
+.block_tab{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.block_user_input_section{
+    width:37%;
+    position: relative;
+}
+.search_user_list{
+    padding: 1rem;
+    position: absolute;
+    /* bottom: 400px; */
+    /* left: 0;
+    
+    right: 0; */
+    /* bottom: -20px; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: rgb(39, 39, 39);
+
+}
+/* SERACHED USER ITEM */
+.searched_user_item{
+    display: flex;
+    gap: 0.7rem;
+    cursor: pointer;
+    align-items: center;
+    height: 45px;
+}
+.searched_user_item:hover{
+    background-color: #151515;
+
+}
+.searched_user_item img{
+    width: 35px;
+    border-radius: 50%;
+    height: 35px;
+}
+.searched_user_item p{
+    /* color: var(--primary_color); */
+    /* color: gray; */
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.selectedUser{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 8px;
+    align-content: center;
+    background-color: red;
+    width: fit-content;
+    padding: 0 2rem;
+    height: 55px;
+    background-color: #001219;
+    border: 1px solid var(--primary_color);
+    border-radius: 5px;
+    /* padding: 5px; */
+}
+.selectedUser img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}

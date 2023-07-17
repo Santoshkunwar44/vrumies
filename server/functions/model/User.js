@@ -12,7 +12,8 @@ const userModel = mongoose.Schema({
     },
     ratings: [
         {
-            userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+            userId: {
+                 type: mongoose.Schema.Types.ObjectId, ref: "User" },
             rating: Number,
         }
     ],
@@ -20,7 +21,7 @@ const userModel = mongoose.Schema({
         {
         user:    {
             type:mongoose.Schema.Types.ObjectId,
-            ref:"Users"
+            ref:"User"
         },
         reason:String,
     }

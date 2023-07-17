@@ -38,7 +38,7 @@ class UserController {
 
 
         try {
-            const theUsers = await User.findById(userId)
+            const theUsers = await User.findById(userId).populate(["blockedUsers.user"])
             res.status(200).json({ message: theUsers, success: true })
 
         } catch (error) {
@@ -245,6 +245,34 @@ class UserController {
             res.status(500).json({message:error.message,success:false})
         }
     }
+     async searchUser(req, res) {
+
+    const { userId } = req.query;
+    let keyword = {};
+    try {
+      if (!userId) {
+        keyword = req.query.search_query
+          ? {
+              $or: [
+                {
+                  username: { $regex: req.query.search_query, $options: "i" },
+                },
+                {
+                     email: { $regex: req.query.search_query, $options: "i" }
+                     },
+              ],
+            }
+          : {};
+      } else {
+        keyword = { _id: userId };
+      }
+      const fetchedUser = await User.find(keyword)
+      res.status(200).json({ message: fetchedUser, success: true });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: error, success: false });
+    }
+  }
 }
 module.exports = new UserController()
 

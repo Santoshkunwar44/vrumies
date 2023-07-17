@@ -41,7 +41,7 @@ class AuthService {
 
     async isUserUpdated(prevUser) {
         try {
-            const user = await UserModal.findById(prevUser._id)
+            const user = await UserModal.findById(prevUser._id).populate(["blockedUsers.user"])
             const { updatedAt: newUserUpdatedTime } = user._doc;
             const { updatedAt: prevUserUpdatedTime } = prevUser
             let newUpdatedTimeInMS = new Date(newUserUpdatedTime).getTime()

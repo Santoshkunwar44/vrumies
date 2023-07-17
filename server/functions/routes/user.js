@@ -4,6 +4,7 @@ const router = require("express").Router()
 
 router.get("/loggedInUser", userController.loggedInUser)
 router.get("/account/refresh", userController.refresh)
+router.get('/search',userController.searchUser)
 router.post("/login", userController.loginUser)
 router.get("/all", userController.getUsers)
 router.get("/:userId", userController.getUserById)

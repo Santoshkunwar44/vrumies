@@ -8,3 +8,8 @@ export const logoutApi = () => instance.post("/user/logout")
 export const searchUserApi = (searchQuery) => instance.get(`/user/search?search_query=${searchQuery}`)
 export const searchUserByIdApi = (userId) => instance.get(`/user/search?userId=${userId}`)
 export const updateUserApi = (data, userId) => instance.put(`/user/${userId}`, data)
+export const searchUserByKeyword = (keyword)=>instance.get(`/user/search?search_query=${keyword}`)
+
+export const blockUserApi = (data)=>instance.post(`/user/action?block=true`,data)
+export const unblockUserApi = (data)=>instance.post(`/user/action?unblock=true`,data)
+
