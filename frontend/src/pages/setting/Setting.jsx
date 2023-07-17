@@ -20,8 +20,8 @@ const Setting = () => {
         <SettingSidebar setSettingTab={setSettingTab} activeTab={setting_tab}/>
         <div className={styles.setting_content}>
 
-        </div>
         {settingTabMapping[setting_tab]}
+        </div>
     </div>
     </>
   )

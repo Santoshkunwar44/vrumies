@@ -16,6 +16,22 @@ const userModel = mongoose.Schema({
             rating: Number,
         }
     ],
+    blockedUsers:[
+        {
+        user:    {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"Users"
+        },
+        reason:String,
+    }
+    ],
+    referralCode:{
+        type:String,
+        
+    },
+    referredBy:{
+        type:String,
+    },
     avgRating: {
         type: Number,
         default: 0

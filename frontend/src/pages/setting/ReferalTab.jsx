@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./setting.module.css"
+import RefferedUsersItem from './RefferedUsersItem'
 
 const ReferalTab = () => {
   return (
@@ -16,19 +17,41 @@ const ReferalTab = () => {
           </div>
 
       </div>
+    <div className={styles.referal_action_box}>
 
       <div className={styles.referal_box}>
 
-        <p>Your referral Code</p>
+        <p className={styles.referal_topic_text}>Your referral Code</p>
         <input type="text" value={"#134Adl23"}/>
 
 
       </div>
-      <div>
-        <p>Referral Code of  your referrer</p>
+      <div className={styles.referal_box}>
+        <p className={styles.referal_topic_text}>Referral Code of  your referrer</p>
         <input type="text" value={"#134Adl23"}/>
       </div>
+    </div>
+<div className={styles.referred_users_box}>
+    
+    <div className={styles.reffered_users_header}>
 
+
+      <h5>List of users referred</h5>
+      <h5>creation Date</h5>
+
+    </div>
+    <div className={styles.referred_users_list}>
+
+      <RefferedUsersItem/>
+      <RefferedUsersItem/>
+          <RefferedUsersItem/>
+      <RefferedUsersItem/>
+            <RefferedUsersItem/>
+      <RefferedUsersItem/>
+
+    </div>
+
+</div>
     </div>
   )
 }

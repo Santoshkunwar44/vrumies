@@ -206,6 +206,45 @@ class UserController {
         return res.json({ message: { accessToken, user: user }, success: true })
     }
 
+    async takeUserAction(req,res){
+        const {block,unblock} =  req.query;
+        const {user,nextUser,reason} = req.body ;
+        let  updatedUser ;
+
+        console.log(Boolean(block),unblock)
+        if(block==="true"){
+          updatedUser = await  User.findByIdAndUpdate(user,{
+                $push:{
+                    blockedUsers:{
+                    user:nextUser,
+                    reason
+                }}
+            },{
+                new:true,
+                returnOriginal:false,
+                returnDocument:true
+            })
+                console.log("blocking")
+        }else if(unblock === "true"){
+            console.log("unblocking")
+             updatedUser = await   User.findByIdAndUpdate(user,{
+                $pull:{
+                    blockedUsers:{
+                    user:nextUser,
+                }}
+            },{
+             new:true,
+                returnOriginal:false,
+                returnDocument:true
+            })
+        }   
+        try {
+            res.status(200).json({message:updatedUser,success:true})    
+        } catch (error) {
+            console.log(error)
+            res.status(500).json({message:error.message,success:false})
+        }
+    }
 }
 module.exports = new UserController()
 
