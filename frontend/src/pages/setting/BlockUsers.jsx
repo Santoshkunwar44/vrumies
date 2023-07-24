@@ -15,7 +15,7 @@ const BlockUsers = () => {
   const [selectedUser,setSelectedUser] =useState()
   const dispatch  = useDispatch()
 
-  console.log(searchInput)
+  // console.log(searchInput)
  const  handleSearch =async(e)=>{
     setSearchInpupt(e.target.value)
     try {
@@ -59,7 +59,7 @@ const BlockUsers = () => {
       <h1>Block users</h1>
           {
   selectedUser &&             <div className={styles.selectedUser}>
-              <img src={selectedUser?.profileImg} alt={'profileImg'}  />
+              <img referrerPolicy="no-referrer" src={selectedUser?.profileImg} alt={'profileImg'}  />
               <p>{selectedUser?.username}</p>
           </div>
 }

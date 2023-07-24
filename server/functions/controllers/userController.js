@@ -64,6 +64,7 @@ class UserController {
         }
     }
 
+
     async deleteUser(req, res) {
         const { userId } = req.params;
         try {
@@ -96,6 +97,33 @@ class UserController {
 
     }
 
+    async addMyReferrerCode(req,res){
+        const {userId,code} = req.body;
+        try {
+                const updatedUser = await User.findByIdAndUpdate(
+                    userId,
+                    {
+                    referredBy:code
+                },
+                {
+                    returnOriginal:false,
+                    returnDocument:true,
+                    new:true
+                })
+                return res.status(200).json({message:updatedUser,success:true})
+        } catch (error) {
+                return res.status(500).json({message:error.message,success:false})
+        }
+    }
+    async myReferUsers(req,res ){
+        const {code} = req.params;
+        try {
+                const users = await User.find({referredBy:code})
+                res.status(200).json({message:users,success:true})
+        } catch (error) {
+                res.status(500).json({message:error.message,success:false})
+        }
+    }
     async logout(req, res) {
         req.session.destroy((err) => {
             if (err) {

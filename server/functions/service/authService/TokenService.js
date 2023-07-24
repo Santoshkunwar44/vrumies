@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken")
+const crypto = require('crypto');
 const RefreshToken = require("../../model/refreshToken")
 class TokenService {
 
@@ -114,6 +115,10 @@ class TokenService {
     async removeRefToken(refreshToken) {
         await RefreshToken.deleteOne({ token: refreshToken })
 
+    }
+
+     createRandomHash(){
+       return crypto.randomBytes(10).toString('hex');
     }
 
 }

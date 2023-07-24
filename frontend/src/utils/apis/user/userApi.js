@@ -12,4 +12,7 @@ export const searchUserByKeyword = (keyword)=>instance.get(`/user/search?search_
 
 export const blockUserApi = (data)=>instance.post(`/user/action?block=true`,data)
 export const unblockUserApi = (data)=>instance.post(`/user/action?unblock=true`,data)
+export const AddReferrerCodeApi = (data)=>instance.post(`/user/referrer`,data);
+export const getMyReferUsersApi =(code) =>instance.get(`/user/myReferUsers/${code}`)
+
 

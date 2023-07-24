@@ -2,12 +2,13 @@
 import styles from './setting.module.css'
 
 
-const RefferedUsersItem = () => {
+const RefferedUsersItem = ({user}) => {
   return (
     <div className={styles.reffered_user_item}>
             <div className={styles.referred_user_info}>
-                <img className={styles.referred_user_img} src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="referredUser" />
-                <p>Spartan Leonidas</p>
+                <img className={styles.referred_user_img} src={user?.profileImg}
+                 referrerPolicy='no-referrer' alt="referredUser" />
+                <p>{user?.username}</p>
             </div>
             <p className={styles.referred_time}>27 March,2022</p>
     </div>

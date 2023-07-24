@@ -30,7 +30,7 @@ const BlockedUserItem = ({data}) => {
     <div className={styles.blockedUserItem}>
 
 
-        <img className={styles.blocked_user_img} src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
+        <img referrerPolicy="no-referrer" className={styles.blocked_user_img} src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
 
         <div className={styles.block_right_content}>
 

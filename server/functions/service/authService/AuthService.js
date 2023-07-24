@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt")
 const UserModal = require("../../model/User")
+const { createRandomHash } = require("./TokenService")
 
 class AuthService {
 
@@ -25,6 +26,7 @@ class AuthService {
                     const hashedPassword = await bcrypt.hash(user.username, salt)
                     user.password = hashedPassword
                     user.lastLoggedIn = Date.now()
+                    user.referralCode = createRandomHash();
                     const User = await UserModal.create(user)
                     const { password, ...others } = User._doc
                     req.session.user = {
